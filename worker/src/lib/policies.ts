@@ -1,0 +1,4 @@
+export const MAX_JSON_BYTES = 32_768;
+export const MAX_SOURCE_FILE_BYTES = 20 * 1024 * 1024;
+export const MAX_MULTIPART_BYTES = MAX_SOURCE_FILE_BYTES + 128 * 1024;
+export const DELIVERY_TOKEN_TTL_MS = 30 * 24 * 60 * 60 * 1_000;

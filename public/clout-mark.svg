@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Clout Chaser</title>
+  <defs>
+    <linearGradient id="cc-neon" x1="8" y1="54" x2="56" y2="10" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#43ADCF"/>
+      <stop offset=".52" stop-color="#4DA2EE"/>
+      <stop offset="1" stop-color="#DA6B9F"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="32" fill="#100B13"/>
+  <circle cx="32" cy="32" r="27.5" fill="none" stroke="url(#cc-neon)" stroke-opacity=".9"/>
+  <path d="M39.8 20.8a15 15 0 1 0 0 22.4" fill="none" stroke="#ECE0E4" stroke-width="5.5" stroke-linecap="round"/>
+  <path d="M45.5 23.8a11.7 11.7 0 0 0-5.7-3M39.8 43.2a11.7 11.7 0 0 0 5.7-3" fill="none" stroke="url(#cc-neon)" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="46.5" cy="32" r="3.2" fill="#DA6B9F"/>
+</svg>
+

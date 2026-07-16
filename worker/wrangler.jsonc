@@ -1,0 +1,227 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "clout-chaser-v0-api",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-07-16",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": false,
+  "routes": [
+    {
+      "pattern": "api.clout.prime88.studio",
+      "custom_domain": true
+    }
+  ],
+  "vars": {
+    "CLOUT_ENVIRONMENT": "production",
+    "CLOUT_ALLOWED_ORIGINS": "https://clout.prime88.studio,http://localhost:3000"
+  },
+  "secrets": {
+    "required": ["CLOUT_OPERATOR_TOKEN", "CLOUT_WHOP_WEBHOOK_SECRET"]
+  },
+  "d1_databases": [
+    {
+      "binding": "CLOUT_DB",
+      "database_name": "clout_chaser_v0",
+      "database_id": "33e631eb-c0b5-4e64-b95d-5fa68324dc6d",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "CLOUT_SOURCES",
+      "bucket_name": "clout-sources"
+    },
+    {
+      "binding": "CLOUT_PACKAGES",
+      "bucket_name": "clout-packages"
+    },
+    {
+      "binding": "CLOUT_RECEIPTS",
+      "bucket_name": "clout-receipts"
+    },
+    {
+      "binding": "CLOUT_PUBLIC",
+      "bucket_name": "clout-public"
+    }
+  ],
+  "queues": {
+    "producers": [
+      {
+        "binding": "CLOUT_INGEST_QUEUE",
+        "queue": "clout-ingest-q"
+      },
+      {
+        "binding": "CLOUT_CLASSIFY_QUEUE",
+        "queue": "clout-classify-q"
+      },
+      {
+        "binding": "CLOUT_SCORE_QUEUE",
+        "queue": "clout-score-q"
+      },
+      {
+        "binding": "CLOUT_COMPILE_QUEUE",
+        "queue": "clout-compile-q"
+      },
+      {
+        "binding": "CLOUT_RECEIPT_QUEUE",
+        "queue": "clout-receipt-q"
+      },
+      {
+        "binding": "CLOUT_NOTIFY_QUEUE",
+        "queue": "clout-notify-q"
+      },
+      {
+        "binding": "CLOUT_DEADLETTER_QUEUE",
+        "queue": "clout-deadletter-q"
+      }
+    ],
+    "consumers": [
+      {
+        "queue": "clout-ingest-q",
+        "max_batch_size": 5,
+        "max_batch_timeout": 5,
+        "max_retries": 3,
+        "dead_letter_queue": "clout-deadletter-q"
+      }
+    ]
+  },
+  "workflows": [
+    {
+      "binding": "CREATE_OPPORTUNITY_WORKFLOW",
+      "name": "create-opportunity-workflow",
+      "class_name": "CreateOpportunityWorkflow"
+    }
+  ],
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "OPPORTUNITY_SESSION",
+        "class_name": "OpportunitySession"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1-opportunity-session",
+      "new_sqlite_classes": ["OpportunitySession"]
+    }
+  ],
+  "observability": {
+    "enabled": true,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1
+    },
+    "traces": {
+      "enabled": true,
+      "head_sampling_rate": 0.1
+    }
+  },
+  "env": {
+    "preview": {
+      "name": "clout-chaser-v0-api-preview",
+      "workers_dev": true,
+      "routes": [],
+      "vars": {
+        "CLOUT_ENVIRONMENT": "preview",
+        "CLOUT_ALLOWED_ORIGINS": "http://localhost:3000,https://clout-chaser-public.vercel.app"
+      },
+      "secrets": {
+        "required": ["CLOUT_OPERATOR_TOKEN", "CLOUT_WHOP_WEBHOOK_SECRET"]
+      },
+      "d1_databases": [
+        {
+          "binding": "CLOUT_DB",
+          "database_name": "clout-chaser-v0-preview",
+          "database_id": "9cbccdc7-98cf-434d-9065-28dd0c2f2442",
+          "migrations_dir": "migrations"
+        }
+      ],
+      "r2_buckets": [
+        {
+          "binding": "CLOUT_SOURCES",
+          "bucket_name": "clout-sources-preview"
+        },
+        {
+          "binding": "CLOUT_PACKAGES",
+          "bucket_name": "clout-packages-preview"
+        },
+        {
+          "binding": "CLOUT_RECEIPTS",
+          "bucket_name": "clout-receipts-preview"
+        },
+        {
+          "binding": "CLOUT_PUBLIC",
+          "bucket_name": "clout-public-preview"
+        }
+      ],
+      "queues": {
+        "producers": [
+          {
+            "binding": "CLOUT_INGEST_QUEUE",
+            "queue": "clout-ingest-q-preview"
+          },
+          {
+            "binding": "CLOUT_CLASSIFY_QUEUE",
+            "queue": "clout-classify-q-preview"
+          },
+          {
+            "binding": "CLOUT_SCORE_QUEUE",
+            "queue": "clout-score-q-preview"
+          },
+          {
+            "binding": "CLOUT_COMPILE_QUEUE",
+            "queue": "clout-compile-q-preview"
+          },
+          {
+            "binding": "CLOUT_RECEIPT_QUEUE",
+            "queue": "clout-receipt-q-preview"
+          },
+          {
+            "binding": "CLOUT_NOTIFY_QUEUE",
+            "queue": "clout-notify-q-preview"
+          },
+          {
+            "binding": "CLOUT_DEADLETTER_QUEUE",
+            "queue": "clout-deadletter-q-preview"
+          }
+        ],
+        "consumers": [
+          {
+            "queue": "clout-ingest-q-preview",
+            "max_batch_size": 5,
+            "max_batch_timeout": 5,
+            "max_retries": 3,
+            "dead_letter_queue": "clout-deadletter-q-preview"
+          }
+        ]
+      },
+      "workflows": [
+        {
+          "binding": "CREATE_OPPORTUNITY_WORKFLOW",
+          "name": "create-opportunity-workflow-preview",
+          "class_name": "CreateOpportunityWorkflow"
+        }
+      ],
+      "durable_objects": {
+        "bindings": [
+          {
+            "name": "OPPORTUNITY_SESSION",
+            "class_name": "OpportunitySession"
+          }
+        ]
+      },
+      "observability": {
+        "enabled": true,
+        "logs": {
+          "enabled": true,
+          "head_sampling_rate": 1
+        },
+        "traces": {
+          "enabled": true,
+          "head_sampling_rate": 0.1
+        }
+      }
+    }
+  }
+}
