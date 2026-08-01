@@ -202,7 +202,40 @@ export const legalPages = {
       { title: "4. Limitation of Liability & Indemnification", body: "To the maximum extent permitted by applicable law, Mediator Solutions LLC, Prime 88 Studio, and its affiliates shall not be liable for direct, indirect, incidental, consequential, or punitive damages arising from the use or inability to use the service, compiled packages, or BBS receipts." },
     ],
   },
+  cookies: {
+    title: "Cookie & Tracking Technologies Policy",
+    description: "Comprehensive disclosures on cookies, local storage, edge analytics, and zero-sale tracking policies.",
+    eyebrow: "Legal / cookie disclosure",
+    lead: "Apple and Google compliant transparency notice regarding session tokens, edge performance storage, and analytics disclosures.",
+    sections: [
+      { title: "1. Essential Operational Cookies", body: "We utilize strictly necessary first-party session tokens and Cloudflare edge security cookies (e.g. __cf_bm, cf_clearance) required for rate limiting, DDoS mitigation, and cryptographically signed session validation. These tokens cannot be disabled as they maintain core system security." },
+      { title: "2. Product Analytics & Zero-Sale Guarantee", body: "We collect anonymized product event telemetry via PostHog to monitor edge response times and UI performance. We maintain a strict Zero-Sale Data Guarantee: personal identity, raw source uploads, email addresses, and payment data are never sold, rented, or monetized for third-party commercial marketing." },
+      { title: "3. Managing Local Preferences", body: "Users may adjust browser settings to block or delete local storage objects. Blocking essential cookies may disrupt access to protected opportunity packages, BBS receipts, and Whop member authorizations." },
+    ],
+  },
+  security: {
+    title: "Information Security & Vulnerability Policy",
+    description: "SOC 2 Type II alignment, zero-trust edge architecture, and coordinated disclosure procedures.",
+    eyebrow: "Legal / security posture",
+    lead: "Enterprise security posture governing SOC 2 alignment, TLS 1.3 encryption, and vulnerability disclosure protocols.",
+    sections: [
+      { title: "1. Enterprise Security Posture", body: "Our systems enforce SOC 2 Type II and ISO/IEC 27001 security controls. Edge compute workers execute in hardened V8 isolates. Data in-transit is secured via TLS 1.3 with HSTS preloading enabled across all subdomains." },
+      { title: "2. Coordinated Vulnerability Disclosure", body: "We welcome security research from the global developer community. If you discover a potential vulnerability in our APIs or edge infrastructure, report your findings directly to security@mediatorsolutions.io. We review all valid reports within 48 business hours." },
+    ],
+  },
+  dmca: {
+    title: "DMCA & Copyright Takedown Procedure",
+    description: "Official Digital Millennium Copyright Act agent contact, notice submission, and counter-notice rules.",
+    eyebrow: "Legal / copyright agent",
+    lead: "Formal procedures for submitting DMCA copyright infringement notifications and counter-notices under 17 U.S.C. § 512.",
+    sections: [
+      { title: "1. Designated Copyright Agent", body: "Under the Digital Millennium Copyright Act (17 U.S.C. § 512(c)), notifications of claimed copyright infringement must be sent in writing to our Designated Agent at legal@mediatorsolutions.io with the subject line 'DMCA Copyright Notice'." },
+      { title: "2. Required Notice Contents", body: "A valid DMCA notice must include: (a) physical or electronic signature of the copyright owner; (b) identification of the copyrighted work claimed to be infringed; (c) exact URL or receipt location of the material; (d) contact information; (e) statement of good faith belief; and (f) statement under penalty of perjury that the information is accurate." },
+      { title: "3. Counter-Notification & Restoration", body: "If material you submitted was removed due to a DMCA notice, you may file a written counter-notification containing your signature, identification of the removed material, statement under penalty of perjury of good faith belief that material was removed by mistake, and consent to federal court jurisdiction." },
+    ],
+  },
 } as const satisfies Record<string, EditorialPage>;
 
 export type LegalSlug = keyof typeof legalPages;
+
 

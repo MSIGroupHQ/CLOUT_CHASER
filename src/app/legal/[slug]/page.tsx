@@ -38,9 +38,14 @@ export default async function LegalDetailPage({ params }: LegalPageProps) {
         lead={page.lead}
         aside="Effective July 16, 2026. Publisher: Mediator Solutions LLC."
       >
-        <Link className="button button-secondary" href="/legal/privacy">Privacy</Link>
-        <Link className="button button-secondary" href="/legal/enterprise-compliance">Enterprise Infrastructure</Link>
+        <Link className="button button-secondary" href="/legal/terms">Terms</Link>
+        <Link className="button button-secondary" href="/legal/privacy">Privacy Notice</Link>
+        <Link className="button button-secondary" href="/legal/enterprise-compliance">Enterprise Infra</Link>
         <Link className="button button-secondary" href="/legal/sovereign-disclaimer">Algorithmic Disclaimer</Link>
+        <Link className="button button-secondary" href="/legal/cookies">Cookies &amp; Tracking</Link>
+        <Link className="button button-secondary" href="/legal/security">Security Posture</Link>
+        <Link className="button button-secondary" href="/legal/dmca">DMCA Agent</Link>
+        <Link className="button button-secondary" href="/legal/acceptable-use">Acceptable Use</Link>
         <Link className="button button-secondary" href="/legal/source-policy">Source Policy</Link>
       </PublicPageHero>
       <section className="section-shell editorial-page">
