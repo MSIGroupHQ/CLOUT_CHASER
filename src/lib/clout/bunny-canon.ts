@@ -15,6 +15,14 @@ export interface BunnyCanonSpec {
   driftChecklist: readonly string[];
 }
 
+export const MANDATORY_ANATOMY_RULES = [
+  "ZERO HUMANS: No humans in the universe. Everything is operated by rabbits.",
+  "RABBIT ANATOMY BARS: Paws, fur, rabbit ears only. NO human fingers, NO human legs, NO human feet.",
+  "NO PET POSTURE: Stand, sit, and dress with humanized posture. Never depicted as pets or on leashes.",
+  "PREFERRED CAMERA ANGLES: Over-the-shoulder camera guy, candid shots, or direct selfies. NO backshots.",
+  "DUAL-RABBIT PREFERENCE: Render two rabbits together (e.g. Olivia + Lisa) to preserve the social illusion."
+] as const;
+
 export const KLOUT_BUNNY_CANON_SPECS: Record<string, BunnyCanonSpec> = {
   olivia: {
     id: "olivia",
@@ -24,11 +32,13 @@ export const KLOUT_BUNNY_CANON_SPECS: Record<string, BunnyCanonSpec> = {
     eyewearOrAccent: "Amber eye reflections, studio rim light",
     attire: "Sleek dark chocolate brown studio jacket or hoodie",
     personalityVibe: "Cringeless TMZ Editor, sharp, nonchalant ('thanks hawkes.')",
-    midjourneyTokens: "photorealistic female rabbit, dark chocolate brown fur #4c302b, ARRI Alexa 35, neon rim light, 8k",
+    midjourneyTokens: "photorealistic female rabbit, dark chocolate brown fur #4c302b, ARRI Alexa 35, neon rim light, over-the-shoulder candid, 8k",
     driftChecklist: [
       "Must maintain exact #4c302b dark chocolate fur color (never grey or light brown)",
       "Must have sharp amber eyes with studio reflection",
-      "Must maintain nonchalant, confident editorial posture"
+      "Must follow rabbit paws anatomy (NO human fingers/legs)",
+      "Must be shot candid or over-the-shoulder (NO backshots)",
+      "Prefer paired with Lisa or Brother K for dual-rabbit illusion preservation"
     ]
   },
   lisa: {
