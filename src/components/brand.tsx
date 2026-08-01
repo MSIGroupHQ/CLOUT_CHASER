@@ -5,7 +5,7 @@ export function BrandMark() {
   return (
     <Link className="brand" href="/" aria-label="Clout Chaser home">
       <span className="brand-mark" aria-hidden="true">
-        <Image src="/clout-mark.svg" width={40} height={40} alt="" />
+        <Image src="/assets/rdcm_embossed_icon.webp" width={40} height={40} alt="RDCM Clout Chaser Seal" unoptimized />
       </span>
       <span className="brand-wordmark">
         <strong>Clout Chaser</strong>
