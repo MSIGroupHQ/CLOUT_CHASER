@@ -5,10 +5,10 @@ export function TechInfrastructureFlex() {
     <section className="tech-infrastructure-flex py-16 px-6 max-w-6xl mx-auto border-t border-white/10">
       <div className="text-center mb-10">
         <span className="text-xs font-mono text-[#00f0ff] uppercase tracking-widest bg-[#00f0ff]/10 border border-[#00f0ff]/30 px-3 py-1 rounded-full inline-block mb-3">
-          HEAVY ENTERPRISE INFRASTRUCTURE & COMPUTE
+          HEAVY ENTERPRISE INFRASTRUCTURE & MEDIA FEEDS
         </span>
         <h2 className="text-3xl font-extrabold text-white tracking-tight">
-          POWERED BY WORLD-CLASS NETWORKS & COMPUTE
+          POWERED BY WORLD-CLASS NETWORKS, COMPUTE & MEDIA
         </h2>
         <p className="text-sm text-white/60 max-w-xl mx-auto mt-2 font-mono">
           Global edge reach. Massive GPU acceleration. Sub-second response scale.
@@ -54,17 +54,31 @@ export function TechInfrastructureFlex() {
         </div>
       </div>
 
-      {/* EXPANDED 9-PARTNER ENTERPRISE COMPUTE GRID */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-6">
+      {/* EXPANDED 10-PARTNER ENTERPRISE GRID (INCLUDING YAHOO) */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6">
+        {/* YAHOO */}
+        <div className="bg-[#0a0a14] border border-white/10 rounded-2xl p-5 text-left hover:border-[#6001d2]/50 transition">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-lg font-black tracking-tight text-[#6001d2] font-mono">YAHOO!</span>
+            <span className="text-[10px] font-mono bg-[#6001d2]/20 text-[#6001d2] border border-[#6001d2]/30 px-2 py-0.5 rounded-full uppercase">
+              MEDIA FEEDS
+            </span>
+          </div>
+          <h4 className="font-bold text-sm text-white mb-1">Yahoo Finance</h4>
+          <p className="text-xs text-white/60 leading-relaxed">
+            Real-time financial news streaming, market syndication & ticker signals.
+          </p>
+        </div>
+
         {/* NVIDIA */}
         <div className="bg-[#0a0a14] border border-white/10 rounded-2xl p-5 text-left hover:border-[#76b900]/50 transition">
           <div className="flex items-center justify-between mb-2">
             <span className="text-lg font-black tracking-tight text-[#76b900] font-mono">NVIDIA</span>
             <span className="text-[10px] font-mono bg-[#76b900]/20 text-[#76b900] border border-[#76b900]/30 px-2 py-0.5 rounded-full uppercase">
-              GPU ACCELERATION
+              GPU ACCEL
             </span>
           </div>
-          <h4 className="font-bold text-sm text-white mb-1">NVIDIA Tensor Compute</h4>
+          <h4 className="font-bold text-sm text-white mb-1">NVIDIA Tensor</h4>
           <p className="text-xs text-white/60 leading-relaxed">
             High-throughput GPU inference acceleration & CUDA media synthesis pipelines.
           </p>
@@ -75,7 +89,7 @@ export function TechInfrastructureFlex() {
           <div className="flex items-center justify-between mb-2">
             <span className="text-lg font-black tracking-tight text-[#ff9900] font-mono">AWS</span>
             <span className="text-[10px] font-mono bg-[#ff9900]/20 text-[#ff9900] border border-[#ff9900]/30 px-2 py-0.5 rounded-full uppercase">
-              CLOUD BACKBONE
+              CLOUD
             </span>
           </div>
           <h4 className="font-bold text-sm text-white mb-1">Amazon Web Services</h4>
@@ -89,7 +103,7 @@ export function TechInfrastructureFlex() {
           <div className="flex items-center justify-between mb-2">
             <span className="text-lg font-black tracking-tight text-[#00a4ef] font-mono">MICROSOFT</span>
             <span className="text-[10px] font-mono bg-[#00a4ef]/20 text-[#00a4ef] border border-[#00a4ef]/30 px-2 py-0.5 rounded-full uppercase">
-              AZURE INFRA
+              AZURE
             </span>
           </div>
           <h4 className="font-bold text-sm text-white mb-1">Microsoft Azure</h4>
@@ -103,12 +117,12 @@ export function TechInfrastructureFlex() {
           <div className="flex items-center justify-between mb-2">
             <span className="text-lg font-black tracking-tight text-[#aa00ff] font-mono">RUNPOD</span>
             <span className="text-[10px] font-mono bg-[#aa00ff]/20 text-[#aa00ff] border border-[#aa00ff]/30 px-2 py-0.5 rounded-full uppercase">
-              GPU CLUSTER
+              GPU PODS
             </span>
           </div>
-          <h4 className="font-bold text-sm text-white mb-1">RunPod Distributed GPU</h4>
+          <h4 className="font-bold text-sm text-white mb-1">RunPod GPU</h4>
           <p className="text-xs text-white/60 leading-relaxed">
-            Ultra-low latency serverless GPU pod execution for video and AI workload bursts.
+            Ultra-low latency serverless GPU pod execution for media workload bursts.
           </p>
         </div>
 
@@ -117,10 +131,10 @@ export function TechInfrastructureFlex() {
           <div className="flex items-center justify-between mb-2">
             <span className="text-lg font-black tracking-tight text-[#ea0a8e] font-mono">T-MOBILE</span>
             <span className="text-[10px] font-mono bg-[#ea0a8e]/20 text-[#ea0a8e] border border-[#ea0a8e]/30 px-2 py-0.5 rounded-full uppercase">
-              5G TRANSPORT
+              5G EDGE
             </span>
           </div>
-          <h4 className="font-bold text-sm text-white mb-1">T-Mobile 5G Network</h4>
+          <h4 className="font-bold text-sm text-white mb-1">T-Mobile 5G</h4>
           <p className="text-xs text-white/60 leading-relaxed">
             Ultra-capacity 5G cellular transport & mobile edge signal connectivity.
           </p>
@@ -131,7 +145,7 @@ export function TechInfrastructureFlex() {
           <div className="flex items-center justify-between mb-2">
             <span className="text-lg font-black tracking-tight text-white font-mono">WHOP</span>
             <span className="text-[10px] font-mono bg-[#ff2d95]/20 text-[#ff2d95] border border-[#ff2d95]/30 px-2 py-0.5 rounded-full uppercase">
-              CREATOR MARKET
+              MARKETPLACE
             </span>
           </div>
           <h4 className="font-bold text-sm text-white mb-1">Whop Ecosystem</h4>
@@ -148,9 +162,9 @@ export function TechInfrastructureFlex() {
               FINANCE
             </span>
           </div>
-          <h4 className="font-bold text-sm text-white mb-1">Stripe Financial Rails</h4>
+          <h4 className="font-bold text-sm text-white mb-1">Stripe Rails</h4>
           <p className="text-xs text-white/60 leading-relaxed">
-            Multi-currency institutional payment rails and automated billing infrastructure.
+            Multi-currency institutional payment rails and automated billing.
           </p>
         </div>
 
@@ -176,9 +190,9 @@ export function TechInfrastructureFlex() {
               DATA GRAPH
             </span>
           </div>
-          <h4 className="font-bold text-sm text-white mb-1">OpenAlex & SEC EDGAR</h4>
+          <h4 className="font-bold text-sm text-white mb-1">OpenAlex & EDGAR</h4>
           <p className="text-xs text-white/60 leading-relaxed">
-            250M+ scientific paper citations & real-time institutional event streams.
+            250M+ scientific paper citations & real-time institutional 8-K streams.
           </p>
         </div>
       </div>
