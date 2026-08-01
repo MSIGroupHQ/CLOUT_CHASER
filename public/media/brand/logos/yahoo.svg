@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
+  <path d="M25 10L12 35H4L19 5L25 10Z" fill="#6001d2"/>
+  <path d="M25 10L38 35H46L31 5L25 10Z" fill="#6001d2"/>
+  <path d="M23 30L27 30L25 55L23 55Z" fill="#6001d2"/>
+  <text x="55" y="42" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="28" letter-spacing="-1px">yahoo!</text>
+</svg>

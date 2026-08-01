@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
+  <path d="M10 15C10 15 25 10 35 22C45 34 30 45 20 40C15 37 12 30 18 25C22 21 30 25 28 30" stroke="#76b900" stroke-width="4" stroke-linecap="round"/>
+  <rect x="32" y="18" width="6" height="24" fill="#76b900"/>
+  <text x="48" y="42" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="26" letter-spacing="1px">NVIDIA</text>
+</svg>

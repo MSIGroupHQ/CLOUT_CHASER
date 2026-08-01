@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 60" fill="none">
+  <path d="M40 22C38 16 32 12 25 12C16 12 9 18 8 27C3 28 0 32 0 37C0 43 5 48 11 48H44C49 48 53 44 53 39C53 34 49 30 44 30C43 30 42 30 41 30.5C41 27.5 40.5 24.5 40 22Z" fill="#f38020"/>
+  <path d="M41 30.5L34 48H44C49 48 53 44 53 39C53 34 49 30 44 30C43 30 42 30 41 30.5Z" fill="#faae40"/>
+  <text x="60" y="39" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="20" letter-spacing="-0.5px">CLOUDFLARE</text>
+</svg>

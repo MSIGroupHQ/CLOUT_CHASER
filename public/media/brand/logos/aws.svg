@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
+  <text x="10" y="38" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="30" letter-spacing="-1px">aws</text>
+  <path d="M12 46C40 58 100 58 135 44" stroke="#ff9900" stroke-width="4" stroke-linecap="round"/>
+  <path d="M125 40L138 43L130 52" fill="#ff9900"/>
+</svg>
