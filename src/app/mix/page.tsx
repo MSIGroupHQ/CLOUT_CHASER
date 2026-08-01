@@ -56,7 +56,7 @@ export default function BunnyMixPage() {
           KLOUT CHASERS <span className="text-[#00f0ff]">BUNNY MIX</span>
         </h1>
         <p className="text-sm md:text-base font-mono text-white/60 max-w-xl mx-auto mb-6">
-          &quot;We print the green, they eat the green.&quot; — Powered by NVIDIA NIM H100 GPUs &amp; MIDAS 1000x WASM scoring.
+          &quot;We print the green, they eat the green.&quot; — Powered by NVIDIA NIM H100 GPUs &amp; content package 1000x WASM scoring.
         </p>
 
         <div className="relative aspect-video max-w-4xl mx-auto rounded-3xl overflow-hidden border border-[#00f0ff]/30 shadow-2xl bg-black mb-12">

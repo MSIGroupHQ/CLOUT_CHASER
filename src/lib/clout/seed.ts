@@ -70,7 +70,7 @@ export const seedOpportunities = [
   },
   {
     oppHash: "CC-CARTI-OPIUM-NOIR",
-    title: "Playboi Carti’s Opium rollout is a masterclass in secret marketing.",
+    title: "Playboi Carti’s Opium rollout is a masterclass in stealth marketing.",
     entity: "Playboi Carti",
     lane: "US Underground & Music",
     score: 92,

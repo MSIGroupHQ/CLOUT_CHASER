@@ -1,16 +1,16 @@
 import { assertPublicPayloadSafe } from "./sanitizer";
 
 export const CLOUT_PUBLIC_COPY = {
-  headline: "Find tomorrow’s viral content today.",
+  headline: "Find tomorrow's viral content today.",
   subhead:
-    "Clout Chaser finds fast-moving public signals, scores the opportunity before saturation, and turns them into creator-ready hooks, captions, scripts, titles, clip targets, and export specs.",
-  directive: "Send one source. Get one free opportunity sample.",
+    "Clout Chaser scores fast-moving public signals before saturation, then delivers creator-ready opportunity packages — hooks, captions, scripts, titles, clip targets, and export specs — backed by cryptographic proof receipts.",
+  directive: "Send one source. Receive one complimentary opportunity package.",
   primaryCta: "Get my free opportunity sample",
-  secondaryCta: "See example receipt",
+  secondaryCta: "View example receipt",
   receiptCta:
-    "Want a pack like this for your niche? Get your free opportunity sample.",
-  pilot: "A Prime 88 attention-intelligence pilot.",
-  receiptProof: "Receipts powered by BBS.",
+    "Want a package like this for your vertical? Request your complimentary opportunity sample.",
+  pilot: "Engineered by Prime 88. Operated by Mediator Solutions LLC.",
+  receiptProof: "Receipts verified by BBS cryptographic proof.",
 } as const;
 
 assertPublicPayloadSafe(CLOUT_PUBLIC_COPY);

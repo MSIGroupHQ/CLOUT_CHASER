@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Inter, Roboto_Mono } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import { SiteFooter, SiteHeader } from "@/components/brand";
 import { PostHogProvider } from "@/components/posthog-provider";
 import "./globals.css";
 
-const geistSans = Inter({
+const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Roboto_Mono({
+const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
@@ -17,37 +17,51 @@ const geistMono = Roboto_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://clout.prime88.studio"),
   title: {
-    default: "Clout Chaser — Find tomorrow's viral content today",
-    template: "%s — Clout Chaser",
+    default: "Clout Chaser — Enterprise Attention Intelligence by Prime 88",
+    template: "%s | Clout Chaser",
   },
   description:
-    "Clout Chaser turns fast-moving public signals into source-backed, creator-ready opportunity packages.",
+    "Enterprise attention intelligence. Clout Chaser scores fast-moving public signals before saturation and delivers creator-ready opportunity packages backed by source-safe receipts.",
   applicationName: "Clout Chaser",
+  keywords: [
+    "attention intelligence",
+    "content opportunity",
+    "creator tools",
+    "trend scoring",
+    "viral content",
+    "Prime 88",
+    "Clout Chaser",
+    "content packages",
+    "source receipts",
+  ],
+  authors: [{ name: "Prime 88 — MSI Group", url: "https://prime88.studio" }],
+  creator: "MSI Group HQ",
+  publisher: "Mediator Solutions LLC",
   icons: {
     icon: [{ url: "/clout-mark.svg", type: "image/svg+xml" }],
     shortcut: "/clout-mark.svg",
   },
   openGraph: {
     type: "website",
-    siteName: "Clout Chaser",
-    title: "Find tomorrow's viral content today.",
+    siteName: "Clout Chaser by Prime 88",
+    title: "Enterprise Attention Intelligence — Clout Chaser",
     description:
-      "Send one source. Get one free, source-backed opportunity sample.",
+      "Score the opportunity before saturation. Source-backed content packages with cryptographic proof receipts.",
     url: "https://clout.prime88.studio",
     images: [
       {
         url: "/clout-chaser-mascot.png",
         width: 2172,
         height: 724,
-        alt: "Clout Chaser rabbit mascot under blue and pink neon lights",
+        alt: "Clout Chaser rabbit mascot under blue and pink neon lights — enterprise attention intelligence",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Find tomorrow's viral content today.",
+    title: "Enterprise Attention Intelligence — Clout Chaser",
     description:
-      "Send one source. Get one free, source-backed opportunity sample.",
+      "Score the opportunity before saturation. Source-backed content packages with cryptographic proof receipts.",
     images: ["/clout-chaser-mascot.png"],
   },
   robots: { index: true, follow: true },

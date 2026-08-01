@@ -20,11 +20,11 @@ const packageOutputs = [
 ] as const;
 
 const audiences = [
-  { index: "01", title: "Creators", body: "Find the angle before the format becomes tired, then turn the signal into a post you can actually make." },
-  { index: "02", title: "Clippers", body: "Know what to cut, where to start, how to frame it, and which export notes matter." },
-  { index: "03", title: "Fan pages", body: "Turn fandom signals into repeatable commentary without copying the source blindly." },
-  { index: "04", title: "Studios", body: "Organize useful opportunities across creators, clients, approvals, and campaigns." },
-  { index: "05", title: "Businesses", body: "Turn attention opportunities into campaigns, replies, leads, and follow-up." },
+  { index: "01", title: "Creators", body: "Identify the angle before the format becomes saturated. Transform the signal into a publishable post with full source backing." },
+  { index: "02", title: "Clippers", body: "Know what to cut, where the entry point is, how to frame it, and which export specifications matter for each platform." },
+  { index: "03", title: "Fan pages", body: "Convert fandom signals into repeatable commentary without replicating the source material." },
+  { index: "04", title: "Studios", body: "Organize viable opportunities across creators, clients, approvals, and campaigns at enterprise scale." },
+  { index: "05", title: "Businesses", body: "Transform attention opportunities into campaigns, responses, leads, and follow-up pipelines." },
 ] as const;
 
 export default function Home() {
@@ -34,11 +34,11 @@ export default function Home() {
     audiences,
     opportunities: seedOpportunities,
     copy: [
-      "From source to usable post",
+      "From source to publishable output",
       "What is moving. Why it matters. What to publish.",
       "Four packages you can inspect now.",
-      "One signal. Five useful lanes.",
-      "Turn repeat output into a working pipeline.",
+      "One signal. Five enterprise verticals.",
+      "Convert repeat output into a working pipeline.",
       "Start the creator CRM trial",
     ],
   });
@@ -55,16 +55,16 @@ export default function Home() {
 
       <section className="section-shell split-section" id="how-it-works">
         <div className="section-intro sticky-intro">
-          <span className="eyebrow">From source to usable post</span>
+          <span className="eyebrow">From source to publishable output</span>
           <h2>What is moving. Why it matters. What to publish.</h2>
-          <p>Clout Chaser turns a public signal into a clear, bounded content opportunity with a source-safe proof record.</p>
+          <p>Clout Chaser transforms a public signal into a bounded content opportunity with a source-safe cryptographic proof record.</p>
         </div>
         <div className="process-stack">
           {[
-            ["01", "Send a source", "Paste a public link, upload an owned clip, or describe the niche you are chasing."],
-            ["02", "Get an Opportunity ID", "The request receives a stable public identifier without placing private data in the ID."],
-            ["03", "Receive a content package", "Get the why-now read, platform fit, hooks, captions, scripts, title options, and export notes."],
-            ["04", "Share the source receipt", "The public-safe page shows the approved outcome while private sources and operator notes stay private."],
+            ["01", "Submit a source", "Paste a public link, upload an owned clip, or describe the vertical you are targeting."],
+            ["02", "Receive an Opportunity ID", "The request receives a stable public identifier. No private data is embedded in the ID."],
+            ["03", "Receive a content package", "Includes the why-now market read, platform fit, hooks, captions, scripts, title options, and export specifications."],
+            ["04", "Share the source receipt", "The public-safe receipt page displays the approved outcome. Private sources and operator notes remain private."],
           ].map(([index, title, body]) => (
             <article className="process-card" key={index}><span>{index}</span><div><h3>{title}</h3><p>{body}</p></div></article>
           ))}
@@ -73,8 +73,8 @@ export default function Home() {
 
       <section className="section-shell seed-opportunities-section" id="opportunities">
         <div className="section-heading-row">
-          <div><span className="eyebrow">Seed proof rail</span><h2>Four packages you can inspect now.</h2></div>
-          <p>Static V0 examples prove the opportunity card, package output, safety note, and receipt/share loop without pretending external data is live.</p>
+          <div><span className="eyebrow">Proof of output</span><h2>Four packages you can inspect now.</h2></div>
+          <p>Static V0 examples demonstrate the opportunity card, package output, safety check, and receipt-share loop — all built from real public signals.</p>
         </div>
         <div className="opportunity-card-grid">
           {seedOpportunities.map((opportunity) => <OpportunityCard key={opportunity.oppHash} opportunity={opportunity} />)}
@@ -83,8 +83,8 @@ export default function Home() {
 
       <section className="audience-section section-shell">
         <div className="section-heading-row">
-          <div><span className="eyebrow">Built for motion</span><h2>One signal. Five useful lanes.</h2></div>
-          <p>Clout Chaser packages the opportunity. You keep control of the source, voice, rights, and final publish decision.</p>
+          <div><span className="eyebrow">Built for motion</span><h2>One signal. Five enterprise verticals.</h2></div>
+          <p>Clout Chaser packages the opportunity. You retain control of the source, voice, rights, and final publish decision.</p>
         </div>
         <div className="audience-grid">
           {audiences.map((audience) => (
@@ -96,12 +96,12 @@ export default function Home() {
       <section className="sample-section section-shell" id="sample"><SampleForm /></section>
 
       <section className="crm-bridge section-shell">
-        <div><span className="eyebrow">Prime 88 operating surfaces</span><h2>Turn repeat output into a working pipeline.</h2></div>
+        <div><span className="eyebrow">Prime 88 operating surfaces</span><h2>Convert repeat output into a working pipeline.</h2></div>
         <div>
-          <p>Finding the opportunity is step one. Track campaigns, replies, leads, and follow-up in Prime 88 CRM when the work becomes repeatable.</p>
+          <p>Identifying the opportunity is step one. Track campaigns, responses, leads, and follow-up across the Prime 88 CRM when the work becomes repeatable.</p>
           <div className="hero-actions">
             <a className="button button-secondary" href="https://crm.prime88.studio/creator-trial">Start the creator CRM trial</a>
-            <Link className="text-link" href="/prime88-surfaces">See every Prime 88 surface →</Link>
+            <Link className="text-link" href="/prime88-surfaces">View every Prime 88 surface →</Link>
           </div>
         </div>
       </section>

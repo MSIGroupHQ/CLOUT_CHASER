@@ -90,13 +90,13 @@ export function VideoAdGallery() {
     <section className="video-ad-gallery py-16 px-6 max-w-6xl mx-auto border-t border-white/10">
       <div className="text-center mb-10">
         <span className="text-xs font-mono text-[#00f0ff] uppercase tracking-widest bg-[#00f0ff]/10 border border-[#00f0ff]/30 px-3 py-1 rounded-full inline-block mb-3">
-          RUNWAY AI COMMERCIAL & A/B AD CUTS
+          RUNWAY AI COMMERCIAL — A/B AD TESTING LIBRARY
         </span>
         <h2 className="text-3xl font-extrabold text-white tracking-tight">
           VIDEO TRAILERS & COMMERCIAL CUTS
         </h2>
         <p className="text-sm text-white/60 max-w-xl mx-auto mt-2 font-mono">
-          30s Master Launch Trailer + 15s Hook, Core, Outro & 6s Bumper A/B Testing Ad Cuts.
+          30s master launch trailer, 15s hook/core/outro variants, and 6s bumper — all built for platform-native A/B testing.
         </p>
       </div>
 

@@ -170,13 +170,13 @@ export function KloutBunnyGallery() {
     <section className="klout-bunny-gallery py-16 px-6 max-w-6xl mx-auto">
       <div className="text-center mb-10">
         <span className="text-xs font-mono text-[#ff2d95] uppercase tracking-widest bg-[#ff2d95]/10 border border-[#ff2d95]/30 px-3 py-1 rounded-full inline-block mb-3">
-          CANON BRAND ARCHIVE • 27+ RENDERS
+          CANON BRAND ARCHIVE — ENTERPRISE ASSET LIBRARY
         </span>
         <h2 className="text-3xl font-extrabold text-white tracking-tight">
           THE KLOUT BUNNY MEDIA GALLERY
         </h2>
         <p className="text-sm text-white/60 max-w-xl mx-auto mt-2 font-mono">
-          Olivia, Brother K, Moody Bunny, and the full 5 Klout bunnies canon cast.
+          Olivia, Brother K, Moody Bunny, and the full 5 Klout Bunnies canon cast. Enterprise-grade brand assets.
         </p>
       </div>
 

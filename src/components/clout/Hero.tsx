@@ -9,17 +9,17 @@ export function Hero() {
   return (
     <section className="hero section-shell">
       <div className="hero-copy">
-        <span className="eyebrow"><i aria-hidden="true" />Clout Chaser / Prime 88 pilot</span>
+        <span className="eyebrow"><i aria-hidden="true" />Clout Chaser — Enterprise attention intelligence</span>
         <h1>{CLOUT_PUBLIC_COPY.headline}</h1>
         <p className="hero-lead">{CLOUT_PUBLIC_COPY.subhead}</p>
         <p className="hero-directive">{CLOUT_PUBLIC_COPY.directive}</p>
-        <ul className="hero-deliverables" aria-label="Your free opportunity sample includes">
-          <li>an opportunity ID</li>
-          <li>a why-now summary</li>
-          <li>platform fit</li>
-          <li>hook / title / caption options</li>
-          <li>export notes</li>
-          <li>a public-safe receipt link</li>
+        <ul className="hero-deliverables" aria-label="Your complimentary opportunity package includes">
+          <li>Unique opportunity ID</li>
+          <li>Why-now market read</li>
+          <li>Platform-fit analysis</li>
+          <li>Hook, title, and caption options</li>
+          <li>Export specifications</li>
+          <li>Source-safe cryptographic receipt</li>
         </ul>
         <div className="hero-actions">
           <Link className="button button-primary" href="/sample">
@@ -63,7 +63,7 @@ export function Hero() {
         <div className="instrument-meta">
           <span>{firstOpportunity.platforms.join(" / ")}</span>
           <span>{firstOpportunity.lane}</span>
-          <Link href={`/r/${firstOpportunity.oppHash}`}>Open receipt →</Link>
+          <Link href={`/r/${firstOpportunity.oppHash}`}>View receipt →</Link>
         </div>
       </div>
     </section>

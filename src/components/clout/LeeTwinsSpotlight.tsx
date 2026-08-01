@@ -119,8 +119,8 @@ export function LeeTwinsSpotlight() {
           <p><span className="text-white/40">Reporter:</span> &quot;Right, sorry. So for the... Lee Twins... how do you handle the pressure of—&quot;</p>
           <p><span className="text-[#00f0ff] font-bold">Taeyang:</span> (Interrupting, elongating further) &quot;이~~~트윈스 (Ee-e-e-teu-win-seu).&quot;</p>
           <p><span className="text-[#ff2d95] font-bold">Gigi:</span> (Thumps back leg like a bass drop) &quot;Check the spelling on the contract, bro.&quot;</p>
-          <p><span className="text-white/40">Reporter:</span> &quot;My apologies! For the international superstars, LEE_TWINS$... what is the secret to your dynamic bond?&quot;</p>
-          <p><span className="text-[#00f0ff] font-bold">Taeyang:</span> &quot;Much better. The secret is simple: we look expensive, we sound expensive, and we never share our cilantro.&quot;</p>
+          <p><span className="text-white/40">Reporter:</span> &quot;My apologies! For the international superstars, LEE_TWINS$... what is the key to your dynamic bond?&quot;</p>
+          <p><span className="text-[#00f0ff] font-bold">Taeyang:</span> &quot;Much better. The answer is simple: we look expensive, we sound expensive, and we never share our cilantro.&quot;</p>
           <p><span className="text-[#ff2d95] font-bold">Gigi:</span> (Lean-back pose) &quot;Facts. Next question.&quot;</p>
         </div>
       </div>

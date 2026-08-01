@@ -24,6 +24,7 @@ export function SiteHeader() {
           <Link href="/opportunities">Opportunities</Link>
           <Link href="/pricing">Pricing</Link>
           <Link href="/docs">Docs</Link>
+          <Link href="/showcase">Showcase</Link>
           <Link href="/prime88-surfaces">Prime 88 surfaces</Link>
           <a href="https://crm.prime88.studio/creator-trial">Creator CRM</a>
         </nav>
@@ -36,20 +37,23 @@ export function SiteHeader() {
 }
 
 export function SiteFooter() {
+  const currentYear = new Date().getFullYear();
   return (
     <footer className="site-footer">
       <div className="site-footer-grid">
         <div>
           <BrandMark />
-          <p>A Prime 88 attention-intelligence pilot.</p>
+          <p>Engineered by Prime 88. Enterprise attention intelligence for creators, studios, and businesses.</p>
         </div>
         <div className="footer-proof">
-          <span>Built by Prime 88.</span>
-          <span>Source-backed receipts.</span>
+          <span>Operated by Mediator Solutions LLC.</span>
+          <span>Source-backed receipts with BBS cryptographic proof.</span>
+          <span>© {currentYear} Mediator Solutions LLC. All rights reserved.</span>
         </div>
         <nav aria-label="Footer navigation">
           <Link href="/sample">Free sample</Link>
           <Link href="/opportunities">Opportunities</Link>
+          <Link href="/showcase">Showcase</Link>
           <Link href="/r/CC-DRK-ICE-FLOOD">Example receipt</Link>
           <Link href="/pricing">Pricing</Link>
           <Link href="/early-access">Early access</Link>
@@ -57,8 +61,8 @@ export function SiteFooter() {
           <Link href="/security">Security</Link>
           <Link href="/capacity">Capacity</Link>
           <Link href="/contact">Contact</Link>
-          <Link href="/legal/terms">Terms</Link>
-          <Link href="/legal/privacy">Privacy</Link>
+          <Link href="/legal/terms">Terms of service</Link>
+          <Link href="/legal/privacy">Privacy policy</Link>
           <Link href="/prime88-surfaces">Prime 88 surfaces</Link>
           <a href="https://crm.prime88.studio/creator-trial">Creator CRM trial</a>
         </nav>
@@ -66,3 +70,4 @@ export function SiteFooter() {
     </footer>
   );
 }
+
