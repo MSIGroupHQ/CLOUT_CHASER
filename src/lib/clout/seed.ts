@@ -252,7 +252,39 @@ export const seedOpportunities = [
   },
 ] as const satisfies readonly SeedOpportunity[];
 
-export function getSeedOpportunity(oppHash: string) {
+import { findGlobalEntity } from "./global-entities";
+
+export function getSeedOpportunity(oppHash: string): SeedOpportunity | undefined {
   const normalized = oppHash.trim().toUpperCase();
-  return seedOpportunities.find((opportunity) => opportunity.oppHash === normalized);
+  const directMatch = seedOpportunities.find((opportunity) => opportunity.oppHash === normalized);
+  if (directMatch) return directMatch;
+
+  // Check dynamic global entity matrix (US & International Celeb Equivalents)
+  const entityMatch = findGlobalEntity(normalized);
+  if (entityMatch) {
+    return {
+      oppHash: `CC-${entityMatch.id}`,
+      title: `${entityMatch.name} — Global Pop Culture Signal Shift`,
+      entity: entityMatch.name,
+      lane: entityMatch.subculture,
+      score: 88,
+      recommendation: "PACKAGE",
+      whyNow: `${entityMatch.name} (${entityMatch.archetype}) is driving high-velocity viral discourse across ${entityMatch.region} pop culture channels.`,
+      platforms: ["TikTok", "Reels", "Shorts", "X"],
+      packagePreview: [
+        "5 hooks",
+        "3 captions",
+        "1 30-second script",
+        "title options",
+        "export notes",
+        "source-safe receipt",
+      ],
+      hook: entityMatch.defaultHook,
+      caption: entityMatch.defaultCaption,
+      riskNote: `Ensure commentary on ${entityMatch.name} uses original analysis and proper attributions.`,
+    };
+  }
+
+  return undefined;
 }
+
