@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import { AgenticBunnyDesk } from "@/components/clout/AgenticBunnyDesk";
 import { KloutBunnyGallery } from "@/components/clout/KloutBunnyGallery";
 import { TechInfrastructureFlex } from "@/components/clout/TechInfrastructureFlex";
+import { VideoAdGallery } from "@/components/clout/VideoAdGallery";
 
 export const metadata: Metadata = {
   title: "Clout Chaser — Agentic Showcase",
@@ -142,6 +143,9 @@ export default function ShowcasePage() {
           </div>
         </div>
       </section>
+
+      {/* RUNWAY AI VIDEO AD GALLERY */}
+      <VideoAdGallery />
 
       {/* KLOUT BUNNY MEDIA GALLERY */}
       <KloutBunnyGallery />
