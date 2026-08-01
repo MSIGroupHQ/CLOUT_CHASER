@@ -15,6 +15,7 @@ import { isReceiptCreateRoute, receiptIdFromRoute } from "./routes/receipt";
 import { opportunityHashFromShareRoute } from "./routes/share";
 import { isSourceRoute } from "./routes/source";
 import { isWhopWebhookRoute } from "./routes/webhook-whop";
+import { isStripeWebhookRoute } from "./routes/webhook-stripe";
 import { initTrident, validateTransition, validTransitions, validatePacket, classifyPacket } from "./trident";
 import {
   InputValidationError,
@@ -1564,6 +1565,80 @@ async function handleWhopWebhook(request: Request, env: Env): Promise<Response> 
   }, 202);
 }
 
+async function handleStripeWebhook(request: Request, env: Env): Promise<Response> {
+  const secret = (env as any).CLOUT_STRIPE_WEBHOOK_SECRET;
+  if (!secret) {
+    throw new HttpError(503, "WEBHOOK_NOT_CONFIGURED", "Stripe payment webhooks are not configured in this environment");
+  }
+  const signatureHeader = request.headers.get("Stripe-Signature")?.trim() ?? "";
+  if (!signatureHeader) {
+    throw new HttpError(401, "WEBHOOK_SIGNATURE_REQUIRED", "Stripe-Signature header is required");
+  }
+
+  const signaturePairs = signatureHeader.split(",").reduce<Record<string, string>>((acc, item) => {
+    const [k, v] = item.split("=", 2);
+    if (k && v) acc[k.trim()] = v.trim();
+    return acc;
+  }, {});
+
+  const timestamp = signaturePairs["t"];
+  const signatureV1 = signaturePairs["v1"];
+  if (!timestamp || !signatureV1) {
+    throw new HttpError(400, "INVALID_WEBHOOK_SIGNATURE_HEADER", "Stripe-Signature format is invalid");
+  }
+
+  const timestampSeconds = Number(timestamp);
+  if (!Number.isInteger(timestampSeconds) || Math.abs(Date.now() - timestampSeconds * 1_000) > 5 * 60 * 1_000) {
+    throw new HttpError(401, "STALE_WEBHOOK", "Stripe webhook timestamp is outside the accepted window");
+  }
+
+  const { value, raw } = await readJsonBodyWithRaw(request);
+  const payload = recordValue(value);
+  const eventId = typeof payload.id === "string" ? payload.id.trim() : "";
+  const eventType = typeof payload.type === "string" ? payload.type.trim() : "";
+
+  if (!eventId || !eventType) {
+    throw new HttpError(422, "INVALID_WEBHOOK_EVENT", "Stripe webhook event ID and type are required");
+  }
+
+  const expectedSignature = await webhookSignature(secret, `${timestamp}.${raw}`);
+  if (!(await secureTokenEquals(signatureV1, expectedSignature))) {
+    throw new HttpError(401, "INVALID_WEBHOOK_SIGNATURE", "Stripe webhook signature verification failed");
+  }
+
+  const receivedAt = nowIso();
+  const eventHash = await sha256Hex(`stripe\n${eventId}\n${raw}`);
+  const internalEventId = await createDeterministicId("evt", `stripe\n${eventHash}`);
+  const metadata = canonicalJson({
+    provider: "stripe",
+    provider_event_id: eventId,
+    provider_event_type: eventType,
+    event_hash: eventHash,
+    payment_status: eventType.includes("succeeded") ? "PAID" : "PENDING",
+  });
+
+  await env.CLOUT_DB.batch([
+    env.CLOUT_DB.prepare(
+      `INSERT OR IGNORE INTO webhook_receipts
+        (event_hash, provider_event_id, provider_event_type, status, received_at)
+       VALUES (?, ?, ?, 'RECEIVED', ?)`,
+    ).bind(eventHash, eventId, eventType, receivedAt),
+    env.CLOUT_DB.prepare(
+      `INSERT OR IGNORE INTO events
+        (id, event_type, actor_type, subject_type, subject_id, payload_hash, payload_json, created_at)
+       VALUES (?, 'stripe.webhook_received', 'SYSTEM', 'stripe_webhook', ?, ?, ?, ?)`,
+    ).bind(internalEventId, eventId, eventHash, metadata, receivedAt),
+  ]);
+
+  return jsonResponse(request, env, {
+    accepted: true,
+    event_id: internalEventId,
+    provider: "stripe",
+    provider_event_type: eventType,
+  }, 202);
+}
+
+
 async function handleAnalyticsEvent(request: Request, env: Env): Promise<Response> {
   assertOriginAllowed(request, env);
   const analytics = validateCloutAnalyticsEvent(await readJsonBody(request));
@@ -1808,6 +1883,9 @@ async function routeRequest(request: Request, env: Env): Promise<Response> {
   }
   if (isWhopWebhookRoute(request.method, url.pathname)) {
     return handleWhopWebhook(request, env);
+  }
+  if (isStripeWebhookRoute(request.method, url.pathname)) {
+    return handleStripeWebhook(request, env);
   }
   if (request.method === "POST" && url.pathname === "/api/clout/events") {
     return handleAnalyticsEvent(request, env);

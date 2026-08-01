@@ -16,7 +16,7 @@
     "CLOUT_ALLOWED_ORIGINS": "https://clout.prime88.studio,http://localhost:3000"
   },
   "secrets": {
-    "required": ["CLOUT_OPERATOR_TOKEN", "CLOUT_WHOP_WEBHOOK_SECRET"]
+    "required": ["CLOUT_OPERATOR_TOKEN", "CLOUT_WHOP_WEBHOOK_SECRET", "CLOUT_STRIPE_WEBHOOK_SECRET"]
   },
   "d1_databases": [
     {
