@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
 import { AgenticBunnyDesk } from "@/components/clout/AgenticBunnyDesk";
+import { KloutBunnyGallery } from "@/components/clout/KloutBunnyGallery";
 import { TechInfrastructureFlex } from "@/components/clout/TechInfrastructureFlex";
 
 export const metadata: Metadata = {
@@ -141,6 +142,9 @@ export default function ShowcasePage() {
           </div>
         </div>
       </section>
+
+      {/* KLOUT BUNNY MEDIA GALLERY */}
+      <KloutBunnyGallery />
 
       {/* TECH INFRASTRUCTURE FLEX */}
       <TechInfrastructureFlex />
