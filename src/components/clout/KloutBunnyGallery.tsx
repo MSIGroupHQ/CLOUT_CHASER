@@ -3,7 +3,7 @@ import Image from "next/image";
 export interface BunnyGalleryItem {
   id: string;
   title: string;
-  category: "Olivia" | "Brother K" | "The 5 Bunnies" | "Neon & Synthwave" | "Studio Outtakes";
+  category: "Olivia" | "Lisa" | "Brother K" | "The 5 Bunnies" | "Neon & Synthwave" | "Studio Outtakes";
   src: string;
   caption: string;
 }
@@ -14,14 +14,21 @@ export const KLOUT_BUNNY_GALLERY: readonly BunnyGalleryItem[] = [
     title: "The 5 Klout Bunnies — Studio Pyramid",
     category: "The 5 Bunnies",
     src: "/media/brand/moody_bunny_pyramid.webp",
-    caption: "Canon studio pyramid featuring all 5 Klout bunnies in dark matte lighting."
+    caption: "Canon studio pyramid featuring Olivia, Lisa, Brother K, Moody Bunny, and Noir."
   },
   {
     id: "b-02",
     title: "Olivia — Dark Chocolate 4c302b Edition",
     category: "Olivia",
     src: "/media/brand/olivia-bunny-fur-color-4c302b-dark-chocolate-brown.webp",
-    caption: "Creamy cocoa 4c302b fur colorway & arrival state."
+    caption: "Olivia, the dark chocolate 4c302b canon colorway & arrival state."
+  },
+  {
+    id: "b-02b",
+    title: "Lisa — Pop Culture Co-Host & Cutest Bunny",
+    category: "Lisa",
+    src: "/media/brand/olivia-o-solo-station-make-her-extra-pretty-girl-b.webp",
+    caption: "Lisa, the fan-favorite co-host & viral clip presenter at her workstation."
   },
   {
     id: "b-03",

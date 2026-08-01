@@ -54,10 +54,10 @@ export function AgenticBunnyDesk() {
           </div>
           <div>
             <div className="text-white font-bold text-base flex items-center gap-2">
-              OLIVIA & BROTHER K
+              OLIVIA, LISA &amp; BROTHER K
               <span className="w-2 h-2 rounded-full bg-[#00f0ff] animate-pulse" />
             </div>
-            <div className="text-xs text-white/50 font-mono">AUTONOMOUS OPERATOR DESK</div>
+            <div className="text-xs text-white/50 font-mono font-semibold">AUTONOMOUS OPERATOR DESK</div>
           </div>
         </div>
         <div className="text-right">
