@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { docsPages, legalPages } from "@/lib/clout/public-content";
 import { seedOpportunities } from "@/lib/clout/seed";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const root = "https://clout.prime88.studio";
   const routes = [
