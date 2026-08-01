@@ -5,13 +5,13 @@ export function TechInfrastructureFlex() {
     <section className="tech-infrastructure-flex py-16 px-6 max-w-6xl mx-auto border-t border-white/10">
       <div className="text-center mb-10">
         <span className="text-xs font-mono text-[#00f0ff] uppercase tracking-widest bg-[#00f0ff]/10 border border-[#00f0ff]/30 px-3 py-1 rounded-full inline-block mb-3">
-          ENTERPRISE COMPUTE & PARTNER NETWORK
+          GLOBAL INFRASTRUCTURE & TELECOM BACKBONE
         </span>
         <h2 className="text-3xl font-extrabold text-white tracking-tight">
-          POWERED BY WORLD-CLASS INFRASTRUCTURE
+          POWERED BY TIER-1 CLOUD & CARRIER NETWORKS
         </h2>
         <p className="text-sm text-white/60 max-w-xl mx-auto mt-2 font-mono">
-          Global edge reach. Heavy GPU compute. Institutional scale.
+          Worldwide edge reach. Massive GPU compute. Enterprise carrier infrastructure.
         </p>
       </div>
 
@@ -61,14 +61,41 @@ export function TechInfrastructureFlex() {
         </div>
       </div>
 
-      {/* BRAND LOGO GRID FLEX */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6">
-        {/* YAHOO */}
-        <div className="bg-[#0a0a14] border border-white/10 rounded-2xl p-5 text-left hover:border-[#6001d2]/50 transition flex flex-col justify-between h-40">
-          <Image src="/media/brand/logos/yahoo.svg" alt="Yahoo Logo" width={120} height={36} className="h-8 w-auto mb-2" unoptimized />
+      {/* BRAND LOGO GRID FLEX (13 TIER-1 PARTNERS) */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4 md:gap-6">
+        {/* AT&T */}
+        <div className="bg-[#0a0a14] border border-white/10 rounded-2xl p-5 text-left hover:border-[#00a8e0]/50 transition flex flex-col justify-between h-40">
+          <Image src="/media/brand/logos/att.svg" alt="AT&T Logo" width={120} height={36} className="h-8 w-auto mb-2" unoptimized />
           <div>
-            <h4 className="font-bold text-xs text-white mb-0.5">Yahoo Finance</h4>
-            <p className="text-[11px] text-white/50 leading-tight">Financial news & market syndication feeds.</p>
+            <h4 className="font-bold text-xs text-white mb-0.5">AT&amp;T Fiber &amp; 5G</h4>
+            <p className="text-[11px] text-white/50 leading-tight">Tier-1 backbone &amp; 5G edge transport.</p>
+          </div>
+        </div>
+
+        {/* ORACLE */}
+        <div className="bg-[#0a0a14] border border-white/10 rounded-2xl p-5 text-left hover:border-[#c74634]/50 transition flex flex-col justify-between h-40">
+          <Image src="/media/brand/logos/oracle.svg" alt="Oracle Logo" width={120} height={36} className="h-8 w-auto mb-2" unoptimized />
+          <div>
+            <h4 className="font-bold text-xs text-white mb-0.5">Oracle Cloud</h4>
+            <p className="text-[11px] text-white/50 leading-tight">Enterprise autonomous database &amp; cloud infra.</p>
+          </div>
+        </div>
+
+        {/* VODAFONE */}
+        <div className="bg-[#0a0a14] border border-white/10 rounded-2xl p-5 text-left hover:border-[#e60000]/50 transition flex flex-col justify-between h-40">
+          <Image src="/media/brand/logos/vodafone.svg" alt="Vodafone Logo" width={120} height={36} className="h-8 w-auto mb-2" unoptimized />
+          <div>
+            <h4 className="font-bold text-xs text-white mb-0.5">Vodafone Global</h4>
+            <p className="text-[11px] text-white/50 leading-tight">European &amp; African mobile carrier network.</p>
+          </div>
+        </div>
+
+        {/* T-MOBILE */}
+        <div className="bg-[#0a0a14] border border-white/10 rounded-2xl p-5 text-left hover:border-[#ea0a8e]/50 transition flex flex-col justify-between h-40">
+          <Image src="/media/brand/logos/tmobile.svg" alt="T-Mobile Logo" width={120} height={36} className="h-8 w-auto mb-2" unoptimized />
+          <div>
+            <h4 className="font-bold text-xs text-white mb-0.5">T-Mobile 5G</h4>
+            <p className="text-[11px] text-white/50 leading-tight">Ultra-capacity 5G cellular transport.</p>
           </div>
         </div>
 
@@ -86,7 +113,7 @@ export function TechInfrastructureFlex() {
           <Image src="/media/brand/logos/aws.svg" alt="AWS Logo" width={120} height={36} className="h-8 w-auto mb-2" unoptimized />
           <div>
             <h4 className="font-bold text-xs text-white mb-0.5">AWS Cloud</h4>
-            <p className="text-[11px] text-white/50 leading-tight">Enterprise cloud storage & scalable compute.</p>
+            <p className="text-[11px] text-white/50 leading-tight">Enterprise cloud storage &amp; scalable compute.</p>
           </div>
         </div>
 
@@ -95,7 +122,7 @@ export function TechInfrastructureFlex() {
           <Image src="/media/brand/logos/microsoft.svg" alt="Microsoft Logo" width={120} height={36} className="h-8 w-auto mb-2" unoptimized />
           <div>
             <h4 className="font-bold text-xs text-white mb-0.5">Microsoft Azure</h4>
-            <p className="text-[11px] text-white/50 leading-tight">Identity management & cloud endpoints.</p>
+            <p className="text-[11px] text-white/50 leading-tight">Identity management &amp; cloud endpoints.</p>
           </div>
         </div>
 
@@ -108,12 +135,12 @@ export function TechInfrastructureFlex() {
           </div>
         </div>
 
-        {/* T-MOBILE */}
-        <div className="bg-[#0a0a14] border border-white/10 rounded-2xl p-5 text-left hover:border-[#ea0a8e]/50 transition flex flex-col justify-between h-40">
-          <Image src="/media/brand/logos/tmobile.svg" alt="T-Mobile Logo" width={120} height={36} className="h-8 w-auto mb-2" unoptimized />
+        {/* YAHOO */}
+        <div className="bg-[#0a0a14] border border-white/10 rounded-2xl p-5 text-left hover:border-[#6001d2]/50 transition flex flex-col justify-between h-40">
+          <Image src="/media/brand/logos/yahoo.svg" alt="Yahoo Logo" width={120} height={36} className="h-8 w-auto mb-2" unoptimized />
           <div>
-            <h4 className="font-bold text-xs text-white mb-0.5">T-Mobile 5G</h4>
-            <p className="text-[11px] text-white/50 leading-tight">Ultra-capacity 5G cellular transport.</p>
+            <h4 className="font-bold text-xs text-white mb-0.5">Yahoo Finance</h4>
+            <p className="text-[11px] text-white/50 leading-tight">Financial news &amp; market syndication feeds.</p>
           </div>
         </div>
 
@@ -122,7 +149,7 @@ export function TechInfrastructureFlex() {
           <Image src="/media/brand/logos/whop.svg" alt="Whop Logo" width={120} height={36} className="h-8 w-auto mb-2" unoptimized />
           <div>
             <h4 className="font-bold text-xs text-white mb-0.5">Whop Marketplace</h4>
-            <p className="text-[11px] text-white/50 leading-tight">Whop App Store & monetization ecosystem.</p>
+            <p className="text-[11px] text-white/50 leading-tight">Whop App Store &amp; monetization ecosystem.</p>
           </div>
         </div>
 
@@ -141,15 +168,6 @@ export function TechInfrastructureFlex() {
           <div>
             <h4 className="font-bold text-xs text-white mb-0.5">Google AGY SDK</h4>
             <p className="text-[11px] text-white/50 leading-tight">Autonomous multi-agent orchestration.</p>
-          </div>
-        </div>
-
-        {/* OPENALEX */}
-        <div className="bg-[#0a0a14] border border-white/10 rounded-2xl p-5 text-left hover:border-[#d97706]/50 transition flex flex-col justify-between h-40">
-          <div className="text-base font-black tracking-tight text-[#d97706] font-mono h-8 flex items-center">OpenAlex</div>
-          <div>
-            <h4 className="font-bold text-xs text-white mb-0.5">OpenAlex & EDGAR</h4>
-            <p className="text-[11px] text-white/50 leading-tight">250M+ citations & real-time 8-K streams.</p>
           </div>
         </div>
       </div>
