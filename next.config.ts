@@ -6,6 +6,22 @@ const nextConfig: NextConfig = {
     root: process.cwd(),
   },
   images: { unoptimized: true },
+  async rewrites() {
+    return [
+      {
+        source: "/mix",
+        destination: "/mix.html",
+      },
+      {
+        source: "/bunny-mix",
+        destination: "/mix.html",
+      },
+      {
+        source: "/Klout-Chasers-Bunny-Mix.html",
+        destination: "/mix.html",
+      },
+    ];
+  },
 };
 
 export default nextConfig;
