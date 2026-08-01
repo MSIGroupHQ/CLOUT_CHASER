@@ -5,13 +5,13 @@ export function TechInfrastructureFlex() {
     <section className="tech-infrastructure-flex py-16 px-6 max-w-6xl mx-auto border-t border-white/10">
       <div className="text-center mb-10">
         <span className="text-xs font-mono text-[#00f0ff] uppercase tracking-widest bg-[#00f0ff]/10 border border-[#00f0ff]/30 px-3 py-1 rounded-full inline-block mb-3">
-          INSTITUTIONAL INFRASTRUCTURE STACK
+          GLOBAL INFRASTRUCTURE & PARTNER ECOSYSTEM
         </span>
         <h2 className="text-3xl font-extrabold text-white tracking-tight">
-          ENGINEERED ON GLOBAL EDGE & AI NETWORKS
+          DEPLOYED ACROSS WORLDWIDE NETWORKS
         </h2>
         <p className="text-sm text-white/60 max-w-xl mx-auto mt-2 font-mono">
-          Sub-millisecond latency. Global distribution. Autonomous intelligence.
+          Global reach. Unmatched speed. Ecosystem scale.
         </p>
       </div>
 
@@ -23,20 +23,20 @@ export function TechInfrastructureFlex() {
               GLOBAL EDGE BACKBONE
             </div>
             <h3 className="text-2xl font-bold text-white mb-4">
-              Cloudflare Edge — 275+ Cities Across 100+ Countries
+              Cloudflare Network — 275+ Cities Across 100+ Countries
             </h3>
             <p className="text-sm text-white/70 leading-relaxed mb-6">
-              Our Hawkes Process Attention Decay engine runs compiled Rust WebAssembly binaries directly on Cloudflare’s global edge network. Zero cold starts, sub-3.4ms target compilation, and instant global execution.
+              Delivering instant global performance and edge availability across 275+ cities worldwide. Zero latency, total reliability, and instant global presence.
             </p>
             <div className="flex flex-wrap gap-3 text-xs font-mono">
               <span className="bg-white/10 text-white px-3 py-1.5 rounded-full border border-white/15">
-                ⚡ Sub-Millisecond WASM
+                ⚡ Global Edge Infrastructure
               </span>
               <span className="bg-white/10 text-white px-3 py-1.5 rounded-full border border-white/15">
-                🛡️ BBS Proof Receipts
+                🛡️ Verified Receipts
               </span>
               <span className="bg-white/10 text-white px-3 py-1.5 rounded-full border border-white/15">
-                🌐 275+ Cities Edge
+                🌐 275+ Cities Network
               </span>
             </div>
           </div>
@@ -66,7 +66,7 @@ export function TechInfrastructureFlex() {
           </div>
           <h4 className="font-bold text-sm text-white mb-1">Whop Marketplace</h4>
           <p className="text-xs text-white/60 leading-relaxed">
-            Native Whop App Store integration & Svix webhook payment rails for creator retention.
+            Whop App Store integration & creator monetization ecosystem.
           </p>
         </div>
 
@@ -80,7 +80,7 @@ export function TechInfrastructureFlex() {
           </div>
           <h4 className="font-bold text-sm text-white mb-1">Stripe Financial Rails</h4>
           <p className="text-xs text-white/60 leading-relaxed">
-            Multi-currency enterprise checkout for high-ticket report & managed package billing.
+            Multi-currency institutional payment rails and checkout infrastructure.
           </p>
         </div>
 
@@ -89,12 +89,12 @@ export function TechInfrastructureFlex() {
           <div className="flex items-center justify-between mb-3">
             <span className="text-lg font-black tracking-tight text-[#10b981] font-mono">AGY SDK</span>
             <span className="text-[10px] font-mono bg-[#10b981]/20 text-[#10b981] border border-[#10b981]/30 px-2 py-0.5 rounded-full uppercase">
-              AI ENGINE
+              AI CORE
             </span>
           </div>
           <h4 className="font-bold text-sm text-white mb-1">Google Antigravity</h4>
           <p className="text-xs text-white/60 leading-relaxed">
-            Autonomous multi-agent orchestration & sub-second attention synthesis.
+            Autonomous multi-agent orchestration architecture.
           </p>
         </div>
 
@@ -108,7 +108,7 @@ export function TechInfrastructureFlex() {
           </div>
           <h4 className="font-bold text-sm text-white mb-1">OpenAlex & SEC EDGAR</h4>
           <p className="text-xs text-white/60 leading-relaxed">
-            250M+ scientific paper citations & real-time institutional 8-K event parsing.
+            250M+ scientific paper citations & real-time institutional event streams.
           </p>
         </div>
       </div>
