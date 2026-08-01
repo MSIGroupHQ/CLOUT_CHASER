@@ -3,6 +3,7 @@ import { CTASection } from "@/components/clout/CTASection";
 import { Hero } from "@/components/clout/Hero";
 import { OpportunityCard } from "@/components/clout/OpportunityCard";
 import { SampleForm } from "@/components/clout/SampleForm";
+import { TechInfrastructureFlex } from "@/components/clout/TechInfrastructureFlex";
 import { PageEvent } from "@/components/page-event";
 import { CLOUT_PUBLIC_COPY } from "@/lib/clout/copy";
 import { assertPublicRouteSafe } from "@/lib/clout/public-route-safety";
@@ -105,7 +106,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-shell final-clout-cta"><CTASection /></section>
+      <section className="section-shell final-clout-cta">
+        <TechInfrastructureFlex />
+        <CTASection />
+      </section>
     </main>
   );
 }

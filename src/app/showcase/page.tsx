@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
 import { AgenticBunnyDesk } from "@/components/clout/AgenticBunnyDesk";
+import { TechInfrastructureFlex } from "@/components/clout/TechInfrastructureFlex";
 
 export const metadata: Metadata = {
   title: "Clout Chaser — Agentic Showcase",
@@ -140,6 +141,9 @@ export default function ShowcasePage() {
           </div>
         </div>
       </section>
+
+      {/* TECH INFRASTRUCTURE FLEX */}
+      <TechInfrastructureFlex />
 
       {/* FOOTER CTA */}
       <footer className="py-12 border-t border-white/10 text-center px-6">
