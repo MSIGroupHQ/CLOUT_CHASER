@@ -177,6 +177,32 @@ export const legalPages = {
       { title: "Removal and holds", body: "A source or public preview may be held or removed when ownership, consent, privacy, safety, or platform-policy concerns arise. Related private records may be retained where legally and operationally appropriate." },
     ],
   },
+  "enterprise-compliance": {
+    title: "Enterprise Infrastructure & Data Sovereignty",
+    description: "Institutional compliance, multi-tenant cloud isolation, edge SLAs, and sovereign data posture.",
+    eyebrow: "Legal / enterprise posture",
+    lead: "Governing the global edge infrastructure, multi-tenant cloud execution, and zero-trust data sovereignty across Mediator Solutions LLC and Prime 88 operating networks.",
+    sections: [
+      { title: "1. Global Multi-Tenant Edge Architecture", body: "The Clout Chaser infrastructure operates across a distributed edge topology spanning over 275+ global POP locations. Execution occurs in isolated sandboxed workers. Data transmission between edge nodes and tenant datastores is encrypted in-transit using TLS 1.3 and at-rest using AES-256-GCM." },
+      { title: "2. Cryptographic Proof & Merkle Tree Receipts", body: "Package outputs generated via the MIDAS compilation engine are sealed into deterministic Merkle Trees. The resulting root hashes construct tamper-evident BlackBox System (BBS) receipts. Hashes verify mathematical origin without disclosing underlying source payloads or proprietary operator weights." },
+      { title: "3. Third-Party Compute & Partner Disclaimers", body: "The service utilizes enterprise infrastructure, carrier transport, and GPU compute provided by Cloudflare, NVIDIA, AWS, Microsoft Azure, RunPod, T-Mobile, AT&T, Oracle, and Vodafone. Trademarks, service marks, and brand assets displayed on the service are the sole property of their respective corporate owners and imply no direct endorsement or partnership unless governed by executed bilateral SLA contracts." },
+      { title: "4. Data Sovereignty & Regional Compliance", body: "Customer payloads and tenant records comply with applicable global data privacy frameworks including EU GDPR (General Data Protection Regulation), CCPA/CPRA, and UK Data Protection Act 2018. Multi-region routing enforces data residency boundaries where configured by enterprise agreement." },
+      { title: "5. Service Level Agreements (SLA) & Availability", body: "Standard public early-access tiers operate on an as-available basis with zero implied uptime guarantees. Enterprise custom contracts operate under dedicated 99.9% uptime SLAs, priority edge queue allocation, and custom disaster recovery protocols governed by bilateral Service Level Agreements." },
+    ],
+  },
+  "sovereign-disclaimer": {
+    title: "Sovereign Algorithmic Signal Disclaimer",
+    description: "Non-reliance disclaimers, Hawkes process attention modeling bounds, and algorithmic execution posture.",
+    eyebrow: "Legal / algorithmic disclaimers",
+    lead: "Official disclaimers regarding attention intelligence models, virality scores, financial non-reliance, and autonomous agent operations.",
+    sections: [
+      { title: "1. Non-Reliance on Predictive Virality Models", body: "All Hawkes Process attention decay rates, S-Rank virality scores, and opportunity window predictions are statistical approximations derived from public signal inputs. They do not constitute financial, investment, legal, or guaranteed commercial advice. Mediator Solutions LLC accepts zero liability for commercial decisions made in reliance upon compiled outputs." },
+      { title: "2. Autonomous Agent Execution Boundaries", body: "Agentic surfaces and autonomous desk operators (including Olivia and Brother K) act as automated interfaces processing user inputs. Outputs are generated programmatically and do not reflect binding corporate commitments or legal warranties by Mediator Solutions LLC." },
+      { title: "3. Third-Party Media & Intellectual Property Boundaries", body: "Signal parsing may reference public trends, celebrity entities, and cultural signals across US, European, LatAm, Asian, Middle Eastern, and African markets. Users retain sole legal responsibility for securing all necessary copyright licenses, music clearances, and trademark permissions prior to publishing derivative content." },
+      { title: "4. Limitation of Liability & Indemnification", body: "To the maximum extent permitted by applicable law, Mediator Solutions LLC, Prime 88 Studio, and its affiliates shall not be liable for direct, indirect, incidental, consequential, or punitive damages arising from the use or inability to use the service, compiled packages, or BBS receipts." },
+    ],
+  },
 } as const satisfies Record<string, EditorialPage>;
 
 export type LegalSlug = keyof typeof legalPages;
+
