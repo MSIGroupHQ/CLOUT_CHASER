@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { MintPassport } from "./MintPassport";
 
 export function LeeTwinsSpotlight() {
   return (
@@ -6,7 +7,7 @@ export function LeeTwinsSpotlight() {
       {/* HANGUL BILLBOARD SIGNAGE */}
       <div className="text-center mb-10">
         <div className="inline-block bg-[#00f0ff]/10 border border-[#00f0ff]/30 px-4 py-1.5 rounded-full text-xs font-mono text-[#00f0ff] uppercase tracking-widest mb-3">
-          SOUTH KOREAN CULT GUEST DUO • 이_트윈스$
+          SOUTH KOREAN CULT GUEST DUO • 이_트윈스$ • FANDOM: THE MINT [$MNT]
         </div>
         <h2 className="text-4xl font-extrabold text-white tracking-tight font-mono">
           ◆ 이 트 윈 스 ◆
@@ -88,6 +89,20 @@ export function LeeTwinsSpotlight() {
               Background hype &amp; contract enforcer: <span className="text-[#00f0ff] font-bold">&quot;💵 Lee_Twins$! 💵 Check the spelling on the contract, bro.&quot;</span>
             </p>
           </div>
+        </div>
+      </div>
+
+      {/* THE MINT [$MNT] PASSPORT DEMO SECTION */}
+      <div className="mb-12">
+        <h3 className="text-center text-lg font-extrabold text-white mb-2 tracking-tight">
+          THE MINT // FANDOM PASSPORT GENERATOR [$MNT]
+        </h3>
+        <p className="text-center text-xs font-mono text-white/50 mb-6 max-w-md mx-auto">
+          &quot;We print the green, they eat the green.&quot; — Cryptographically verified via BBS Merkle tree proofs.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <MintPassport username="SolarFanatic" tier="Solar" mintNumber={88} />
+          <MintPassport username="ThumperElite" tier="Thumper" mintNumber={104} />
         </div>
       </div>
 
