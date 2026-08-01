@@ -60,3 +60,12 @@ wrangler-dev.*
 
 # WASM compiled output (checked in separately if needed)
 worker/src/trident_engine.wasm
+
+# Large raw video dumps (keep key web clips)
+public/media/video/*.MP4
+public/media/video/*.mp4
+!public/media/video/runway-clout-chaser-launch-30s-20260731-151332.mp4
+!public/media/video/Find_Tomorrows_Viral_Content_Today.mp4
+!public/media/video/Console_Opening.mp4
+!public/media/video/Arcade.mp4
+
