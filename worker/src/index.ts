@@ -15,6 +15,7 @@ import { isReceiptCreateRoute, receiptIdFromRoute } from "./routes/receipt";
 import { opportunityHashFromShareRoute } from "./routes/share";
 import { isSourceRoute } from "./routes/source";
 import { isWhopWebhookRoute } from "./routes/webhook-whop";
+import { initTrident, validateTransition, validTransitions, validatePacket, classifyPacket } from "./trident";
 import {
   InputValidationError,
   canonicalJson,
@@ -1853,6 +1854,30 @@ async function routeRequest(request: Request, env: Env): Promise<Response> {
   if (request.method === "POST" && approve?.[1]) {
     return handleManualApprove(request, env, decodeURIComponent(approve[1]));
   }
+  if (request.method === "GET" && url.pathname === "/api/trident/states") {
+    const states = ["draft", "generated", "review_required", "approved", "issued", "held", "superseded", "archived"];
+    return jsonResponse(request, env, { states });
+  }
+  if (request.method === "POST" && url.pathname === "/api/trident/validate-transition") {
+    const body = await request.json() as { current_state: string; target_state: string };
+    const outcome = validateTransition(body.current_state, body.target_state);
+    return jsonResponse(request, env, outcome);
+  }
+  if (request.method === "POST" && url.pathname === "/api/trident/valid-transitions") {
+    const body = await request.json() as { state: string };
+    const transitions = validTransitions(body.state);
+    return jsonResponse(request, env, { state: body.state, transitions });
+  }
+  if (request.method === "POST" && url.pathname === "/api/trident/validate-packet") {
+    const body = await request.json();
+    const result = validatePacket(body);
+    return jsonResponse(request, env, result);
+  }
+  if (request.method === "POST" && url.pathname === "/api/trident/classify") {
+    const body = await request.json() as { title: string; description: string };
+    const classification = classifyPacket(body.title, body.description);
+    return jsonResponse(request, env, { classification });
+  }
   throw new HttpError(404, "ROUTE_NOT_FOUND", "Route not found");
 }
 
@@ -1860,6 +1885,7 @@ export default {
   async fetch(request, env): Promise<Response> {
     const requestId = crypto.randomUUID();
     try {
+      await initTrident();
       const response = await routeRequest(request, env);
       response.headers.set("X-Request-ID", requestId);
       return response;

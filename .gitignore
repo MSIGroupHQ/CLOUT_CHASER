@@ -44,3 +44,19 @@ next-env.d.ts
 
 .vercel
 .env*
+
+# Rust build artifacts
+target/
+worker/crates/*/target/
+*.rlib
+*.rmeta
+*.d
+*.wasm.map
+*.pdb
+
+# Wrangler
+.wrangler/
+wrangler-dev.*
+
+# WASM compiled output (checked in separately if needed)
+worker/src/trident_engine.wasm

@@ -196,7 +196,7 @@
           }
         ]
       },
-      "workflows": [
+  "workflows": [
         {
           "binding": "CREATE_OPPORTUNITY_WORKFLOW",
           "name": "create-opportunity-workflow-preview",
