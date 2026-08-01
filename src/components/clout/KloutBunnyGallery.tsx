@@ -24,11 +24,11 @@ export const KLOUT_BUNNY_GALLERY: readonly BunnyGalleryItem[] = [
     caption: "Olivia, the dark chocolate 4c302b canon colorway & arrival state."
   },
   {
-    id: "b-02b",
-    title: "Lisa — Pop Culture Co-Host & Cutest Bunny",
-    category: "Lisa",
-    src: "/media/brand/olivia-o-solo-station-make-her-extra-pretty-girl-b.webp",
-    caption: "Lisa, the fan-favorite co-host & viral clip presenter at her workstation."
+    id: "b-02c",
+    title: "Olivia & Lisa — Ralph Lauren Collection High-Fashion Editorial Pose",
+    category: "Olivia",
+    src: "/media/brand/recreate-the-ralph-lauren-collection-pose-from-usi.webp",
+    caption: "Iconic Ralph Lauren runway pose. Olivia called out the lightened skin tone and followed up with her dark chocolate 4c302b selfie."
   },
   {
     id: "b-03",
