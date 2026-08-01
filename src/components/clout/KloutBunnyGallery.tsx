@@ -10,6 +10,27 @@ export interface BunnyGalleryItem {
 
 export const KLOUT_BUNNY_GALLERY: readonly BunnyGalleryItem[] = [
   {
+    id: "olivia-trilogy-1",
+    title: "Olivia — Canon #4c302b Dark Chocolate Fur Colorway",
+    category: "Olivia",
+    src: "/media/brand/olivia-bunny-fur-color-4c302b-dark-chocolate-brown.webp",
+    caption: "The canonical dark chocolate #4c302b fur colorway. Olivia's signature arrival state."
+  },
+  {
+    id: "olivia-trilogy-2",
+    title: "Olivia — Frontal Close-Up Portrait",
+    category: "Olivia",
+    src: "/media/brand/olivia-bunny-4c302b-dark-chocolate-close-up-fronta.webp",
+    caption: "Frontal close-up studio shot showing sharp amber eye shine and precise fur detail."
+  },
+  {
+    id: "olivia-trilogy-3",
+    title: "Olivia — Candid Instagram Moment (Getting Ready)",
+    category: "Olivia",
+    src: "/media/brand/olivia-bunny-4c302b-candid-instagram-moment-gettin.webp",
+    caption: "Candid behind-the-scenes Instagram moment before entering the operator desk."
+  },
+  {
     id: "b-01",
     title: "The 5 Klout Bunnies — Studio Pyramid",
     category: "The 5 Bunnies",
