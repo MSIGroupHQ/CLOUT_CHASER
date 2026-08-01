@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 import { AgenticBunnyDesk } from "@/components/clout/AgenticBunnyDesk";
 import { KloutBunnyGallery } from "@/components/clout/KloutBunnyGallery";
+import { LeeTwinsSpotlight } from "@/components/clout/LeeTwinsSpotlight";
 import { TechInfrastructureFlex } from "@/components/clout/TechInfrastructureFlex";
 import { VideoAdGallery } from "@/components/clout/VideoAdGallery";
 
@@ -146,6 +147,9 @@ export default function ShowcasePage() {
 
       {/* RUNWAY AI VIDEO AD GALLERY */}
       <VideoAdGallery />
+
+      {/* LEE_TWINS$ SOUTH KOREAN CULT DUO & CECEE FOUNDER SPOTLIGHT */}
+      <LeeTwinsSpotlight />
 
       {/* KLOUT BUNNY MEDIA GALLERY */}
       <KloutBunnyGallery />
