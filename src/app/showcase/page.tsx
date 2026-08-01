@@ -6,6 +6,7 @@ import { KloutBunnyGallery } from "@/components/clout/KloutBunnyGallery";
 import { LeeTwinsSpotlight } from "@/components/clout/LeeTwinsSpotlight";
 import { TechInfrastructureFlex } from "@/components/clout/TechInfrastructureFlex";
 import { VideoAdGallery } from "@/components/clout/VideoAdGallery";
+import { assertPublicRouteSafe } from "@/lib/clout/public-route-safety";
 
 export const metadata: Metadata = {
   title: "Clout Chaser — Agentic Showcase",
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
 };
 
 export default function ShowcasePage() {
+  assertPublicRouteSafe("/showcase", { page: "showcase" });
   return (
     <div className="showcase-container bg-[#05050c] text-white min-h-screen">
       {/* HEADER NAV */}

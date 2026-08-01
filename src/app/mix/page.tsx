@@ -6,6 +6,7 @@ import { KloutBunnyGallery } from "@/components/clout/KloutBunnyGallery";
 import { LeeTwinsSpotlight } from "@/components/clout/LeeTwinsSpotlight";
 import { TechInfrastructureFlex } from "@/components/clout/TechInfrastructureFlex";
 import { VideoAdGallery } from "@/components/clout/VideoAdGallery";
+import { assertPublicRouteSafe } from "@/lib/clout/public-route-safety";
 
 export const metadata: Metadata = {
   title: "Clout Chaser — Interactive Klout Bunny Mix",
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
 };
 
 export default function BunnyMixPage() {
+  assertPublicRouteSafe("/mix", { page: "mix" });
   return (
     <div className="bunny-mix-container bg-[#05050c] text-white min-h-screen">
       {/* HEADER NAV */}

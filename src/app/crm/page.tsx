@@ -3,6 +3,9 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { assertPublicRouteSafe } from "@/lib/clout/public-route-safety";
+
+assertPublicRouteSafe("/crm", { page: "crm" });
 
 interface SavedOpportunity {
   id: string;
