@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { PackageFeedback } from "@/components/package-feedback";
+import { ArcadeCountdown } from "@/components/clout/ArcadeCountdown";
 import type { ApiResult, PrivatePackage } from "@/lib/clout/types";
 
 function PackageList({ items, empty }: { items: readonly string[]; empty: string }) {
@@ -75,6 +76,13 @@ export function PrivatePackageView({
             <p className="package-action">{record.recommendedAction}</p>
             {record.contentType ? <p>Recommended content type: {record.contentType}</p> : null}
             {record.secondaryPlatforms.length ? <p>Secondary platforms: {record.secondaryPlatforms.join(" / ")}</p> : null}
+            
+            <ArcadeCountdown
+              initialSeconds={15}
+              title="DELIVERY ACCESS PREVIEW COUNTDOWN"
+              ctaText="CLAIM ENTERPRISE LICENSE"
+              ctaHref="/pricing"
+            />
           </div>
         </section>
         <section className="package-section" id="hooks"><span className="panel-index">HOOKS</span><div><h2>Opening angles</h2><PackageList items={record.hooks} empty="No hooks were included in this package." /></div></section>

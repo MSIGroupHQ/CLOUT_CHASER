@@ -2816,3 +2816,26 @@ textarea:focus-visible {
   .receipt-package-card { min-height: auto; }
   .source-receipt-panel dl div { flex-direction: column; gap: 8px; }
 }
+
+/* MOBILE NAV RAIL & GESTURE CLAMPING */
+.site-nav,
+.package-tabs,
+.marquee-rail {
+  touch-action: pan-y;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ARCADE SCANLINES & NEON GLOW UTILITIES */
+.arcade-scanline {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%,
+    rgba(0, 0, 0, 0.25) 50%
+  );
+  background-size: 100% 4px;
+}
+
+.arcade-text-glow {
+  text-shadow: 0 0 8px currentColor, 0 0 20px currentColor;
+}
+

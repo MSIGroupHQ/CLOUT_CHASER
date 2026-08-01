@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { FormEvent, useState } from "react";
+import { ArcadeCountdown } from "@/components/clout/ArcadeCountdown";
 import { hasCloutApi, submitSampleRequest } from "@/lib/clout/api";
 import { trackCloutEvent } from "@/lib/clout/events";
 import { createOpportunityHash } from "@/lib/clout/hash";
@@ -230,6 +231,14 @@ export function SampleForm() {
             <h3>{state.submission.opp_hash}</h3>
             <p>Thanks. Your source is in the queue.</p>
             <p>We’ll return an opportunity sample with an opportunity ID, why-now summary, platform fit, hooks, captions, scripts, and a source-safe receipt.</p>
+            
+            <ArcadeCountdown
+              initialSeconds={10}
+              title="PRIORITY INTRA-QUEUE TIMER"
+              ctaText="UPGRADE TO INSTANT QUEUE"
+              ctaHref="/pricing"
+            />
+
             {state.local ? <p className="local-proof-note">This local proof created the Opportunity ID without sending your source anywhere.</p> : null}
             {state.submission.public_url ? (
               <a className="text-link" href={state.submission.public_url}>Open receipt →</a>
