@@ -250,6 +250,48 @@ export const seedOpportunities = [
     caption: "Underground Phonk is the highest converting background audio format on Reels.",
     riskNote: "Ensure audio commentary uses licensed or fair-use snippet commentary.",
   },
+  {
+    oppHash: "CC-AI-AGENT-CREATOR-SCALE",
+    title: "Autonomous AI creator agents are running 24/7 faceless YouTube channels.",
+    entity: "AI Agents",
+    lane: "US Underground & Creator Economy",
+    score: 93,
+    recommendation: "PACKAGE",
+    whyNow:
+      "Multi-agent automation frameworks allow solo creators to produce 50 shorts daily with zero manual editing.",
+    platforms: ["YouTube", "TikTok", "X"],
+    hook: "This channel published 500 videos this month without a single human employee.",
+    caption: "Faceless automated channels are out-pacing traditional creator studios.",
+    riskNote: "Maintain transparency regarding automated synthesis and AI generated content.",
+  },
+  {
+    oppHash: "CC-CORTEIZ-PARIS-DROP",
+    title: "Corteiz guerrilla streetwear drops trigger city-wide scavenger hunts in Paris.",
+    entity: "Corteiz",
+    lane: "High-Fashion & Streetwear",
+    score: 91,
+    recommendation: "PACKAGE",
+    whyNow:
+      "Unannounced stealth coordinates posted on X drive thousands of kids to sprint across metropolitan streets.",
+    platforms: ["TikTok", "Reels", "X"],
+    hook: "A single tweet just caused 5,000 people to sprint through the streets of Paris.",
+    caption: "Guerrilla location drops generate 100x more engagement than traditional retail releases.",
+    riskNote: "Ensure safety commentary when documenting crowd events.",
+  },
+  {
+    oppHash: "CC-SOLANA-BLIND-DROPS",
+    title: "Solana meme token trading circles dominate micro-finance FinTwit.",
+    entity: "Solana Trading",
+    lane: "Crypto & Internet Money",
+    score: 87,
+    recommendation: "PACKAGE",
+    whyNow:
+      "Ultra-low transaction fees enable instant viral token creation tied to breaking internet news within 10 minutes.",
+    platforms: ["X", "Telegram", "TikTok"],
+    hook: "A new token was minted, hit a $10M market cap, and crashed all before lunch.",
+    caption: "Internet speed trading metas are turning viral memes into instant liquid assets.",
+    riskNote: "Include mandatory financial disclaimers; do not provide investment advice.",
+  },
 ] as const satisfies readonly SeedOpportunity[];
 
 import { findGlobalEntity } from "./global-entities";

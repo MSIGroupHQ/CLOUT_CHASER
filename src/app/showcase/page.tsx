@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
 import { AgenticBunnyDesk } from "@/components/clout/AgenticBunnyDesk";
+import { GpuMemeGenerator } from "@/components/clout/GpuMemeGenerator";
 import { KloutBunnyGallery } from "@/components/clout/KloutBunnyGallery";
 import { LeeTwinsSpotlight } from "@/components/clout/LeeTwinsSpotlight";
 import { TechInfrastructureFlex } from "@/components/clout/TechInfrastructureFlex";
@@ -94,6 +95,9 @@ export default function ShowcasePage() {
           </div>
         </div>
       </section>
+
+      {/* GPU MEME GENERATOR */}
+      <GpuMemeGenerator />
 
       {/* AGENTIC INTERACTIVE DESK */}
       <section className="py-8 px-6">
