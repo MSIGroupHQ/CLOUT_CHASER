@@ -14,6 +14,20 @@ export type MicroOffer = {
 
 export const MICRO_OFFERS: readonly MicroOffer[] = [
   {
+    id: "mo-starter-099",
+    name: "Viral Starter Pack",
+    price: "$0.99",
+    amountCents: 99,
+    badge: "LOWEST ENTRY BARRIER",
+    deliverables: [
+      "3 high-retention viral hooks",
+      "1 NVIDIA-accelerated meme render ($0 COGS)",
+      "CapCut / Premiere XML project preset link",
+      "Instant public BBS receipt",
+    ],
+    checkoutUrl: "https://whop.com/checkout/plan_starter_099",
+  },
+  {
     id: "mo-hooks-199",
     name: "Instant Hook & Title Pack",
     price: "$1.99",
@@ -54,20 +68,6 @@ export const MICRO_OFFERS: readonly MicroOffer[] = [
       "Complete export specs & rights disclaimers",
     ],
     checkoutUrl: "https://whop.com/checkout/plan_proof_2999",
-  },
-  {
-    id: "mo-studio-4999",
-    name: "Studio Velocity Pass",
-    price: "$49.99",
-    amountCents: 4999,
-    badge: "ENTERPRISE BUNDLE",
-    deliverables: [
-      "5 complete opportunity packages",
-      "Dedicated priority queue allocation",
-      "Custom platform export presets",
-      "Direct operator review support",
-    ],
-    checkoutUrl: "https://whop.com/checkout/plan_studio_4999",
   },
 ] as const;
 
