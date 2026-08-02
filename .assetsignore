@@ -1,0 +1,11 @@
+# Exclude video files over 25MB from Cloudflare Workers asset bundle
+public/media/video/929f92296ae15af095928f3acf7f526a39bb92c5.mp4
+public/media/video/LH.MP4
+public/media/video/ScreenRecording_07-14-2026 17-52-49_1.MP4
+public/media/video/YTDown.com_YouTube_How-I-Built-a-100k-month-Micro-SaaS-in-6_Media_jxQyRwV94qk_001_1080p.mp4
+public/media/video/runway-clout-chaser-launch-30s-20260731-151332.mp4
+media/video/929f92296ae15af095928f3acf7f526a39bb92c5.mp4
+media/video/LH.MP4
+media/video/ScreenRecording_07-14-2026 17-52-49_1.MP4
+media/video/YTDown.com_YouTube_How-I-Built-a-100k-month-Micro-SaaS-in-6_Media_jxQyRwV94qk_001_1080p.mp4
+media/video/runway-clout-chaser-launch-30s-20260731-151332.mp4
