@@ -7,5 +7,17 @@
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"
-  }
+  },
+  "r2_buckets": [
+    {
+      "bucket_name": "clout-chaser-media",
+      "binding": "CLOUT_CHASER_MEDIA"
+    }
+  ],
+  "routes": [
+    {
+      "pattern": "cloutchaser.prime88.studio",
+      "custom_domain": true
+    }
+  ]
 }
