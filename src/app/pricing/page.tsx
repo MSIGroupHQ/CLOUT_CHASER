@@ -3,13 +3,14 @@ import Link from "next/link";
 import { CompetitorMatrix } from "@/components/competitor-matrix";
 import { ProductNotice, PublicPageHero } from "@/components/content-shell";
 import { MembershipMatrix } from "@/components/membership-matrix";
+import { MicroOfferGrid } from "@/components/clout/MicroOfferGrid";
 import { competitorReview, competitorRows } from "@/lib/clout/competitive-position";
 import { accessTypes, membershipColumns, membershipRows } from "@/lib/clout/membership";
 import { assertPublicRouteSafe } from "@/lib/clout/public-route-safety";
 
 export const metadata: Metadata = {
   title: "Pricing",
-  description: "Clout Chaser free sample and early-access candidate pricing.",
+  description: "Clout Chaser free sample, instant micro-offers, and early-access candidate pricing.",
 };
 
 const plans = [
@@ -43,6 +44,9 @@ export default function PricingPage() {
         lead="The free sample is live scope. Paid plan figures are candidate early-access ranges until a checkout is intentionally opened."
         aside="No plan promises unlimited AI, media processing, messaging, storage, enrichment, or third-party provider usage."
       />
+
+      <MicroOfferGrid />
+
       <section className="section-shell content-section">
         <div className="pricing-card-grid">
           {plans.map((plan, index) => (
