@@ -1,0 +1,7 @@
+public/media/brand/**
+public/media/Klout-Chasers-Bunny-Mix*.html
+public/Klout-Chasers-Bunny-Mix.html
+public/mix.html
+**/*.mp4
+**/*.mov
+node_modules
