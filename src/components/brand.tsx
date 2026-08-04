@@ -1,15 +1,27 @@
 import Image from "next/image";
 import Link from "next/link";
 
+/** Landing (clout.prime88) stages into action surface (cloutchaser) until cloutchaser.ai */
+const CHASER_APP = "https://cloutchaser.prime88.studio";
+const ONLYCLOUT = "https://onlyclout.netlify.app";
+
 export function BrandMark() {
   return (
     <Link className="brand" href="/" aria-label="Clout Chaser home">
       <span className="brand-mark" aria-hidden="true">
-        <Image src="/assets/rdcm_embossed_icon.webp" width={40} height={40} alt="RDCM Clout Chaser Seal" unoptimized />
+        <Image
+          src="/assets/rdcm_embossed_icon.webp"
+          width={40}
+          height={40}
+          alt=""
+          unoptimized
+        />
       </span>
       <span className="brand-wordmark">
-        <strong>Clout Chaser</strong>
-        <small>Attention intelligence</small>
+        <strong>
+          Clout <span style={{ color: "var(--cyan)" }}>Chaser</span>
+        </strong>
+        <small>Landing · stages the chase</small>
       </span>
     </Link>
   );
@@ -23,14 +35,20 @@ export function SiteHeader() {
         <nav className="site-nav" aria-label="Primary navigation">
           <Link href="/opportunities">Opportunities</Link>
           <Link href="/pricing">Pricing</Link>
-          <Link href="/docs">Docs</Link>
+          <Link href="/sample">Sample</Link>
           <Link href="/showcase">Showcase</Link>
-          <Link href="/prime88-surfaces">Prime 88 surfaces</Link>
-          <a href="https://crm.prime88.studio/creator-trial">Creator CRM</a>
+          <Link href="/prime88-surfaces">Prime 88</Link>
+          <a href={ONLYCLOUT}>OnlyClout</a>
+          <a href={CHASER_APP}>Open desk</a>
         </nav>
-        <Link className="button button-small button-primary" href="/sample">
-          Get my free opportunity sample
-        </Link>
+        <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap" }}>
+          <Link className="button button-small button-secondary" href="/sample">
+            Free sample
+          </Link>
+          <a className="button button-small button-primary" href={CHASER_APP}>
+            Enter Clout Chaser
+          </a>
+        </div>
       </div>
     </header>
   );
@@ -43,11 +61,17 @@ export function SiteFooter() {
       <div className="site-footer-grid">
         <div>
           <BrandMark />
-          <p>Engineered by Prime 88. Enterprise attention intelligence for creators, studios, and businesses.</p>
+          <p>
+            Engineered by Prime 88.{" "}
+            <strong style={{ color: "var(--ivory)" }}>clout.prime88.studio</strong> is the
+            public landing.{" "}
+            <strong style={{ color: "var(--cyan)" }}>cloutchaser.prime88.studio</strong> is
+            where the chase runs — until cloutchaser.ai.
+          </p>
         </div>
         <div className="footer-proof">
           <span>Operated by Mediator Solutions LLC.</span>
-          <span>Source-backed receipts with BBS cryptographic proof.</span>
+          <span>Neon Klout system · OnlyClout · Clout Chaser</span>
           <span>© {currentYear} Mediator Solutions LLC. All rights reserved.</span>
         </div>
         <nav aria-label="Footer navigation">
@@ -58,16 +82,14 @@ export function SiteFooter() {
           <Link href="/pricing">Pricing</Link>
           <Link href="/early-access">Early access</Link>
           <Link href="/docs">Documentation</Link>
-          <Link href="/security">Security</Link>
-          <Link href="/capacity">Capacity</Link>
-          <Link href="/contact">Contact</Link>
-          <Link href="/legal/terms">Terms of service</Link>
-          <Link href="/legal/privacy">Privacy policy</Link>
+          <a href={CHASER_APP}>Clout Chaser desk</a>
+          <a href={ONLYCLOUT}>OnlyClout copy bank</a>
           <Link href="/prime88-surfaces">Prime 88 surfaces</Link>
           <a href="https://crm.prime88.studio/creator-trial">Creator CRM trial</a>
+          <Link href="/legal/terms">Terms</Link>
+          <Link href="/legal/privacy">Privacy</Link>
         </nav>
       </div>
     </footer>
   );
 }
-

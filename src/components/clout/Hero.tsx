@@ -9,7 +9,10 @@ export function Hero() {
   return (
     <section className="hero section-shell">
       <div className="hero-copy">
-        <span className="eyebrow"><i aria-hidden="true" />Clout Chaser — Enterprise attention intelligence</span>
+        <span className="eyebrow">
+          <i aria-hidden="true" />
+          Landing · clout.prime88.studio → desk on cloutchaser
+        </span>
         <h1>{CLOUT_PUBLIC_COPY.headline}</h1>
         <p className="hero-lead">{CLOUT_PUBLIC_COPY.subhead}</p>
         <p className="hero-directive">{CLOUT_PUBLIC_COPY.directive}</p>
@@ -25,12 +28,16 @@ export function Hero() {
           <Link className="button button-primary" href="/sample">
             {CLOUT_PUBLIC_COPY.primaryCta}
           </Link>
+          <a className="button button-secondary" href="https://cloutchaser.prime88.studio">
+            Enter the desk →
+          </a>
           <Link className="button button-secondary" href={`/r/${firstOpportunity.oppHash}`}>
             {CLOUT_PUBLIC_COPY.secondaryCta}
           </Link>
         </div>
         <div className="trust-line">
           <span>{CLOUT_PUBLIC_COPY.pilot}</span>
+          <span>Neon Klout system · same rail as OnlyClout</span>
           <span>{CLOUT_PUBLIC_COPY.receiptProof}</span>
         </div>
       </div>

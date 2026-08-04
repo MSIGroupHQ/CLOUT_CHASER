@@ -1,24 +1,28 @@
 @import "tailwindcss";
 
+/* Visual mission — congruent with OnlyClout + cloutchaser.prime88.studio
+   Klout neon: ink #0a0a14 · pink #ff2d95 · cyan #00f0ff */
 :root {
-  --ink: #070708;
-  --panel: #111114;
-  --panel-soft: #18181c;
-  --panel-raised: #211a32;
-  --ivory: #f5f1e8;
-  --muted: #a7a29a;
-  --line: rgba(245, 241, 232, 0.14);
-  --line-strong: rgba(245, 241, 232, 0.25);
-  --signal: #39ff88;
-  --signal-bright: #78ffaa;
-  --signal-soft: rgba(57, 255, 136, 0.14);
-  --pink: #ff2e88;
+  --ink: #0a0a14;
+  --ink-deep: #05050c;
+  --panel: #11111d;
+  --panel-soft: #0f0f1c;
+  --panel-raised: #1a1228;
+  --ivory: #ffffff;
+  --muted: rgba(255, 255, 255, 0.55);
+  --line: rgba(255, 255, 255, 0.1);
+  --line-strong: rgba(255, 255, 255, 0.22);
+  --signal: #ff2d95;
+  --signal-bright: #ff7ab8;
+  --signal-soft: rgba(255, 45, 149, 0.16);
+  --pink: #ff2d95;
+  --cyan: #00f0ff;
   --violet: #8b5cf6;
-  --electric: #8b5cf6;
+  --electric: #00f0ff;
   --plum: #411840;
   --gold: #c8a96a;
   --danger: #ff4545;
-  --receipt: #60a5fa;
+  --receipt: #00f0ff;
   --page-x: clamp(18px, 4vw, 64px);
   --page-max: 1480px;
   --radius-small: 10px;
@@ -27,10 +31,11 @@
 }
 
 @theme inline {
-  --color-background: #070708;
-  --color-foreground: #f5f1e8;
-  --font-sans: "Geist", "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
+  --color-background: #0a0a14;
+  --color-foreground: #ffffff;
+  --font-sans: var(--font-space), "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-display: var(--font-syne), "Syne", ui-sans-serif, system-ui, sans-serif;
 }
 
 * {
@@ -59,12 +64,12 @@ body {
   min-height: 100%;
   overflow-x: hidden;
   background:
-    radial-gradient(circle at 82% 8%, rgba(57, 255, 136, 0.08), transparent 30rem),
-    radial-gradient(circle at 12% 32%, rgba(255, 46, 136, 0.09), transparent 30rem),
-    radial-gradient(circle at 50% 72%, rgba(139, 92, 246, 0.055), transparent 34rem),
+    radial-gradient(circle at 82% 8%, rgba(0, 240, 255, 0.1), transparent 30rem),
+    radial-gradient(circle at 12% 32%, rgba(255, 45, 149, 0.12), transparent 30rem),
+    radial-gradient(circle at 50% 72%, rgba(139, 92, 246, 0.06), transparent 34rem),
     var(--ink);
   color: var(--ivory);
-  font-family: "Geist", "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-space), "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   text-rendering: optimizeLegibility;
 }
 
@@ -149,10 +154,10 @@ textarea:focus-visible {
   width: 40px;
   height: 40px;
   overflow: hidden;
-  border: 1px solid rgba(57, 255, 136, 0.4);
+  border: 1px solid rgba(255, 45, 149, 0.55);
   border-radius: 50%;
   background: var(--ink);
-  box-shadow: 0 0 24px rgba(255, 46, 136, 0.11);
+  box-shadow: 0 0 22px rgba(255, 45, 149, 0.35);
 }
 
 .brand-mark img {
@@ -175,11 +180,16 @@ textarea:focus-visible {
 
 .brand-wordmark small {
   margin-top: 5px;
-  color: var(--muted);
-  font-family: "Geist Mono", monospace;
+  color: var(--cyan);
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
   font-size: 8px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+h1, h2, h3, .display {
+  font-family: var(--font-syne), "Syne", ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.03em;
 }
 
 .site-nav {
@@ -229,12 +239,13 @@ textarea:focus-visible {
 
 .button-primary {
   background: var(--signal);
-  color: #070708;
-  box-shadow: 0 12px 38px rgba(57, 255, 136, 0.15);
+  color: #000000;
+  box-shadow: 0 12px 38px rgba(255, 45, 149, 0.35);
 }
 
 .button-primary:hover {
   background: var(--signal-bright);
+  box-shadow: 0 12px 42px rgba(255, 45, 149, 0.5);
 }
 
 .button-secondary {
@@ -434,7 +445,8 @@ textarea:focus-visible {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: var(--gold);
+  background: var(--cyan);
+  box-shadow: 0 0 10px var(--cyan);
 }
 
 .instrument-record {
@@ -2514,7 +2526,7 @@ textarea:focus-visible {
   border: 1px solid var(--line);
   border-radius: 24px;
   background:
-    linear-gradient(145deg, rgba(57, 255, 136, 0.055), transparent 38%),
+    linear-gradient(145deg, rgba(255, 45, 149, 0.055), transparent 38%),
     var(--panel);
   box-shadow: 0 28px 90px rgba(0, 0, 0, 0.23);
   transition: transform 160ms ease, border-color 160ms ease;
@@ -2527,7 +2539,7 @@ textarea:focus-visible {
 }
 
 .opportunity-card:hover {
-  border-color: rgba(57, 255, 136, 0.34);
+  border-color: rgba(255, 45, 149, 0.34);
   transform: translateY(-2px);
 }
 
@@ -2716,9 +2728,9 @@ textarea:focus-visible {
 }
 
 .package-output-feature.package-script {
-  border-color: rgba(57, 255, 136, 0.26);
+  border-color: rgba(255, 45, 149, 0.26);
   background:
-    linear-gradient(145deg, rgba(57, 255, 136, 0.065), transparent 48%),
+    linear-gradient(145deg, rgba(255, 45, 149, 0.065), transparent 48%),
     var(--panel);
 }
 
@@ -2752,11 +2764,11 @@ textarea:focus-visible {
   padding: clamp(32px, 6vw, 68px);
   align-items: end;
   gap: 34px;
-  border: 1px solid rgba(57, 255, 136, 0.28);
+  border: 1px solid rgba(255, 45, 149, 0.28);
   border-radius: 28px;
   background:
     radial-gradient(circle at 92% 10%, rgba(255, 46, 136, 0.12), transparent 26rem),
-    linear-gradient(145deg, rgba(57, 255, 136, 0.075), transparent 48%),
+    linear-gradient(145deg, rgba(255, 45, 149, 0.075), transparent 48%),
     var(--panel);
 }
 
@@ -2782,7 +2794,7 @@ textarea:focus-visible {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  background: #070708;
+  background: #0a0a14;
   color: var(--ivory);
   text-align: center;
 }
