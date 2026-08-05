@@ -2775,6 +2775,168 @@ h1, h2, h3, .display {
 .clout-cta .button { width: fit-content; }
 .final-clout-cta { padding-top: 40px; padding-bottom: clamp(100px, 13vw, 180px); }
 
+/* Tech infrastructure / partner logos — clout + cloutchaser surfaces */
+.tech-infrastructure-flex {
+  width: min(1120px, 100%);
+  margin: 0 auto 48px;
+  padding: 0 4px 8px;
+}
+.tech-infra-intro {
+  text-align: center;
+  margin-bottom: 36px;
+}
+.tech-infra-eyebrow {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 6px 12px;
+  border: 1px solid rgba(0, 240, 255, 0.28);
+  border-radius: 999px;
+  background: rgba(0, 240, 255, 0.08);
+  color: #7df9ff;
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.tech-infra-title {
+  margin: 0 0 12px;
+  font-size: clamp(1.6rem, 3.2vw, 2.15rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: #fff;
+}
+.tech-infra-lede {
+  margin: 0 auto;
+  max-width: 34rem;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+.tech-infra-feature {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 28px;
+  align-items: center;
+  margin-bottom: 28px;
+  padding: clamp(22px, 3vw, 32px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  background: linear-gradient(145deg, rgba(10, 10, 20, 0.95), rgba(14, 16, 28, 0.88));
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+.tech-infra-feature-logo {
+  display: block;
+  height: 36px;
+  width: auto;
+  margin-bottom: 18px;
+}
+.tech-infra-feature h3 {
+  margin: 0 0 12px;
+  font-size: clamp(1.25rem, 2.2vw, 1.55rem);
+  font-weight: 650;
+  letter-spacing: -0.03em;
+  color: #fff;
+}
+.tech-infra-feature p {
+  margin: 0 0 16px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+.tech-infra-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.tech-infra-chips li {
+  padding: 6px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.78);
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 11px;
+}
+.tech-infra-feature-media {
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #000;
+}
+.tech-infra-map {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.tech-infra-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+.tech-infra-card {
+  display: flex;
+  min-height: 148px;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  background: rgba(10, 10, 20, 0.88);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.tech-infra-card:hover {
+  border-color: color-mix(in srgb, var(--partner-accent, #00f0ff) 55%, transparent);
+  transform: translateY(-2px);
+}
+.tech-infra-card-logo {
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+}
+.tech-infra-card-logo img {
+  height: 28px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+.tech-infra-card h4 {
+  margin: 0 0 4px;
+  font-size: 0.82rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+.tech-infra-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.72rem;
+  line-height: 1.4;
+}
+.tech-infra-footnote {
+  margin: 22px 0 0;
+  color: rgba(255, 255, 255, 0.38);
+  font-size: 0.72rem;
+  line-height: 1.5;
+  text-align: center;
+}
+.tech-infra-footnote a {
+  color: rgba(125, 249, 255, 0.75);
+  text-decoration: none;
+}
+.tech-infra-footnote a:hover { text-decoration: underline; }
+@media (max-width: 900px) {
+  .tech-infra-feature { grid-template-columns: 1fr; }
+  .tech-infra-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 520px) {
+  .tech-infra-grid { grid-template-columns: 1fr; }
+}
+
 .prime88-surfaces-page { padding-top: clamp(100px, 13vw, 180px); padding-bottom: clamp(100px, 13vw, 180px); }
 .surface-card-grid { display: grid; margin-bottom: 36px; gap: 12px; }
 .surface-card-grid article { min-height: 240px; padding: clamp(24px, 4vw, 38px); border: 1px solid var(--line); border-radius: 20px; background: var(--panel); }
