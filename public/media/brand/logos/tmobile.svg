@@ -1,5 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
-  <text x="10" y="42" fill="#ea0a8e" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="34">T</text>
-  <rect x="36" y="32" width="6" height="6" fill="#ea0a8e"/>
-  <text x="48" y="42" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="26">Mobile</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" role="img" aria-label="T-Mobile">
+  <title>T-Mobile</title>
+  <text x="4" y="33" fill="#E20074" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700">T</text>
+  <rect x="28" y="26" width="7" height="7" fill="#E20074"/>
+  <text x="44" y="33" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">Mobile</text>
 </svg>

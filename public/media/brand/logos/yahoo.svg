@@ -1,6 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
-  <path d="M25 10L12 35H4L19 5L25 10Z" fill="#6001d2"/>
-  <path d="M25 10L38 35H46L31 5L25 10Z" fill="#6001d2"/>
-  <path d="M23 30L27 30L25 55L23 55Z" fill="#6001d2"/>
-  <text x="55" y="42" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="28" letter-spacing="-1px">yahoo!</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 48" role="img" aria-label="Yahoo">
+  <title>Yahoo</title>
+  <path fill="#6001D2" d="M22 8L10 28H4L18 4l4 4zm0 0l12 20h6L26 4l-4 4zM20 26h4l-2 16h-2V26z"/>
+  <text x="48" y="32" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">yahoo!</text>
 </svg>

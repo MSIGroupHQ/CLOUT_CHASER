@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
-  <path d="M10 15L20 45L30 25L40 45L50 15" stroke="#ff2d95" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="60" y="41" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="28" letter-spacing="-1px">whop</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 48" role="img" aria-label="Whop">
+  <title>Whop</title>
+  <path d="M8 12l8 24 8-16 8 16 8-24" fill="none" stroke="#FF2D95" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="56" y="32" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">whop</text>
 </svg>

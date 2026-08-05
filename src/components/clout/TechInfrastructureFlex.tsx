@@ -2,7 +2,8 @@ import Image from "next/image";
 
 /**
  * Partner / infrastructure strip for clout.prime88.studio + cloutchaser.prime88.studio
- * Logos: public/media/brand/logos/*
+ * Logos: public/media/brand/logos/* (brand-kit SVGs — self-contained, Arial fallback text)
+ * Note: Vercel must NOT vercelignore logos/ (see .vercelignore). Marks = class of infra, not partnership claims.
  * Canon: CLOUT_CHASER_CANON · MSIGroupHQ/CLOUT_CHASER
  */
 

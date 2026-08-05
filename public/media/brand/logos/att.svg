@@ -1,5 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
-  <circle cx="25" cy="30" r="16" fill="none" stroke="#00a8e0" stroke-width="4"/>
-  <path d="M12 25H38M10 30H40M12 35H38" stroke="#00a8e0" stroke-width="3"/>
-  <text x="50" y="42" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="28" letter-spacing="1px">AT&amp;T</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 48" role="img" aria-label="AT&amp;T">
+  <title>AT&amp;T</title>
+  <circle cx="20" cy="24" r="14" fill="none" stroke="#00A8E0" stroke-width="3.5"/>
+  <path d="M10 18h20M8 24h24M10 30h20" fill="none" stroke="#00A8E0" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="44" y="32" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">AT&amp;T</text>
 </svg>

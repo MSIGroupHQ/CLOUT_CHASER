@@ -1,5 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 60" fill="none">
-  <path d="M40 22C38 16 32 12 25 12C16 12 9 18 8 27C3 28 0 32 0 37C0 43 5 48 11 48H44C49 48 53 44 53 39C53 34 49 30 44 30C43 30 42 30 41 30.5C41 27.5 40.5 24.5 40 22Z" fill="#f38020"/>
-  <path d="M41 30.5L34 48H44C49 48 53 44 53 39C53 34 49 30 44 30C43 30 42 30 41 30.5Z" fill="#faae40"/>
-  <text x="60" y="39" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="20" letter-spacing="-0.5px">CLOUDFLARE</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 48" role="img" aria-label="Cloudflare">
+  <title>Cloudflare</title>
+  <path fill="#F38020" d="M86.3 28.4c.3-1.1.5-2.2.5-3.4 0-6.5-5.3-11.8-11.8-11.8-4.5 0-8.4 2.5-10.4 6.2-1.4-.7-3-1.1-4.7-1.1-5.3 0-9.7 3.9-10.5 9H48c-3.9 0-7 3.1-7 7s3.1 7 7 7h37.2c3.3 0 6-2.7 6-6 0-2.5-1.5-4.6-3.9-5.5z"/>
+  <path fill="#FAAD3F" d="M86.3 28.4c.3-1.1.5-2.2.5-3.4 0-.7-.1-1.4-.2-2.1-1.6 2.4-4.3 4-7.5 4H55.1c.2 1.5.8 2.8 1.7 3.9h25.6c1.7 0 3.2-.7 4.2-1.8.1-.2.2-.4.3-.6.2-.4.3-.8.4-1.2v.1c0-.3 0-.6-.1-.9z"/>
+  <text x="98" y="33" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" letter-spacing="0.04em">CLOUDFLARE</text>
 </svg>

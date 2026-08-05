@@ -45,8 +45,14 @@ export const metadata: Metadata = {
   creator: "MSI Group HQ",
   publisher: "Mediator Solutions LLC",
   icons: {
-    icon: [{ url: "/clout-mark.svg", type: "image/svg+xml" }],
-    shortcut: "/clout-mark.svg",
+    // Money-bag cloud mark — temporary SoT favicon for all Clout surfaces
+    icon: [
+      { url: "/clout-favicon.png", type: "image/png", sizes: "512x512" },
+      { url: "/clout-favicon.webp", type: "image/webp" },
+      { url: "/clout-mark.svg", type: "image/svg+xml" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+    shortcut: ["/clout-favicon.png"],
   },
   openGraph: {
     type: "website",

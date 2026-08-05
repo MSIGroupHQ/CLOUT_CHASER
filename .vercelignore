@@ -1,7 +1,26 @@
-public/media/brand/**
+# Keep deploy lean — enterprise logos + CF network map + favicons MUST ship.
+# Prior bug: public/media/brand/** wiped logos → 404 on clout.prime88.studio
+
+# Heavy bunny / campaign packs only
+public/media/brand/CloutChaser/**
+public/media/brand/CloutChaser_Pack/**
+
+# Loose brand photos (not logos/)
+public/media/brand/*.webp
+public/media/brand/*.WEBP
+public/media/brand/*.jpg
+public/media/brand/*.jpeg
+public/media/brand/*.JPG
+# Do NOT ignore *.png here — Cloudflare_Network_*.png must deploy
+
+# Static mix HTML mirrors
 public/media/Klout-Chasers-Bunny-Mix*.html
 public/Klout-Chasers-Bunny-Mix.html
 public/mix.html
+
+# Large video (R2 / CF)
 **/*.mp4
 **/*.mov
+**/*.MP4
+
 node_modules
