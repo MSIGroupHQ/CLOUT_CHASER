@@ -1,9 +1,14 @@
 import Image from "next/image";
 
 /**
- * Partner / infrastructure strip for clout.prime88.studio + cloutchaser.prime88.studio
- * Logos: public/media/brand/logos/* (brand-kit SVGs — self-contained, Arial fallback text)
- * Note: Vercel must NOT vercelignore logos/ (see .vercelignore). Marks = class of infra, not partnership claims.
+ * Partner / infrastructure strip — clout.prime88.studio + cloutchaser.prime88.studio
+ *
+ * Brand kit logos in public/media/brand/logos/* sourced from:
+ * - Wikimedia Commons official SVG wordmarks (AWS, Microsoft, Google, Oracle, Yahoo, NVIDIA, Cloudflare)
+ * - Simple Icons official mark paths (Stripe, T-Mobile, AT&T, Vodafone) where Commons restricted
+ * - Whop site icon (PNG)
+ *
+ * Marks shown for infrastructure-class context only — not endorsement claims.
  * Canon: CLOUT_CHASER_CANON · MSIGroupHQ/CLOUT_CHASER
  */
 
@@ -13,6 +18,8 @@ type Partner = {
   blurb: string;
   logo: string;
   accent: string;
+  /** square marks need a touch more height */
+  square?: boolean;
 };
 
 const PARTNERS: Partner[] = [
@@ -63,7 +70,7 @@ const PARTNERS: Partner[] = [
     name: "RunPod",
     blurb: "Serverless GPU pods for burst media workloads.",
     logo: "/media/brand/logos/runpod.svg",
-    accent: "#aa00ff",
+    accent: "#8b5cf6",
   },
   {
     id: "stripe",
@@ -71,13 +78,15 @@ const PARTNERS: Partner[] = [
     blurb: "Checkout rails and multi-currency settlement.",
     logo: "/media/brand/logos/stripe.svg",
     accent: "#635bff",
+    square: true,
   },
   {
     id: "whop",
     name: "Whop",
     blurb: "Marketplace distribution and creator monetization.",
-    logo: "/media/brand/logos/whop.svg",
+    logo: "/media/brand/logos/whop.png",
     accent: "#ff2d95",
+    square: true,
   },
   {
     id: "att",
@@ -85,13 +94,15 @@ const PARTNERS: Partner[] = [
     blurb: "Tier-1 fiber and 5G transport backbone.",
     logo: "/media/brand/logos/att.svg",
     accent: "#00a8e0",
+    square: true,
   },
   {
     id: "tmobile",
     name: "T-Mobile",
     blurb: "High-capacity 5G cellular transport.",
     logo: "/media/brand/logos/tmobile.svg",
-    accent: "#ea0a8e",
+    accent: "#e20074",
+    square: true,
   },
   {
     id: "vodafone",
@@ -99,6 +110,7 @@ const PARTNERS: Partner[] = [
     blurb: "International mobile carrier network.",
     logo: "/media/brand/logos/vodafone.svg",
     accent: "#e60000",
+    square: true,
   },
   {
     id: "yahoo",
@@ -132,8 +144,8 @@ export function TechInfrastructureFlex() {
           <Image
             src="/media/brand/logos/cloudflare.svg"
             alt="Cloudflare"
-            width={168}
-            height={40}
+            width={200}
+            height={48}
             className="tech-infra-feature-logo"
             unoptimized
           />
@@ -164,7 +176,7 @@ export function TechInfrastructureFlex() {
         {PARTNERS.map((partner) => (
           <article
             key={partner.id}
-            className="tech-infra-card"
+            className={`tech-infra-card${partner.square ? " tech-infra-card--mark" : ""}`}
             role="listitem"
             style={{ ["--partner-accent" as string]: partner.accent }}
           >
@@ -172,8 +184,8 @@ export function TechInfrastructureFlex() {
               <Image
                 src={partner.logo}
                 alt={`${partner.name} logo`}
-                width={140}
-                height={40}
+                width={partner.square ? 48 : 160}
+                height={partner.square ? 48 : 40}
                 unoptimized
               />
             </div>
@@ -184,14 +196,13 @@ export function TechInfrastructureFlex() {
       </div>
 
       <p className="tech-infra-footnote">
-        Marks are property of their respective owners. Shown to describe the
-        infrastructure class Clout Chaser deploys on — not an endorsement claim.
-        Surface:{" "}
+        Marks are property of their respective owners (official brand assets /
+        press SVGs). Shown to describe infrastructure class only — not an
+        endorsement or partnership claim unless under separate written
+        agreement. Surface:{" "}
         <a href="https://clout.prime88.studio">clout.prime88.studio</a>
         {" · "}
         <a href="https://cloutchaser.prime88.studio">cloutchaser.prime88.studio</a>
-        {" · "}
-        <a href="https://github.com/MSIGroupHQ/CLOUT_CHASER">source</a>
       </p>
     </section>
   );

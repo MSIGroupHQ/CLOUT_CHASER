@@ -2936,21 +2936,29 @@ h1, h2, h3, .display {
   transform: translateY(-2px);
 }
 .tech-infra-card-logo {
-  min-height: 40px;
+  min-height: 44px;
   display: flex;
   align-items: center;
 }
 .tech-infra-card-logo img {
-  height: 32px;
+  height: 36px;
   width: auto;
   max-width: 100%;
   object-fit: contain;
   object-position: left center;
-  /* brand-kit SVGs are already light-on-dark; avoid opacity washout */
   opacity: 1;
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.45));
 }
+/* Square mark logos (Stripe/Whop/carriers icon forms) */
+.tech-infra-card--mark .tech-infra-card-logo img {
+  height: 40px;
+  width: 40px;
+  object-position: center;
+}
 .tech-infra-feature-logo {
+  height: 40px !important;
+  width: auto !important;
+  max-width: 220px;
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.45));
 }
 .tech-infra-card h4 {
