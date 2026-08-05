@@ -18,10 +18,6 @@
     {
       "pattern": "cloutchaser.prime88.studio",
       "custom_domain": true
-    },
-    {
-      "pattern": "clout.prime88.studio",
-      "custom_domain": true
     }
   ]
 }

@@ -1,0 +1,17 @@
+{
+  "schema": "open_claw.status.v1",
+  "ts": "2026-08-05T01:40:56.722559+00:00",
+  "host": "CAELUM-II",
+  "alive": true,
+  "authority": {
+    "clout_github": "https://github.com/MSIGroupHQ/CLOUT_CHASER",
+    "reach_github": "https://github.com/MSIGroupHQ/REACH_INTELLIGENCE",
+    "clout_live": "https://cloutchaser.prime88.studio",
+    "family": "open-claw",
+    "human_ceiling": "paste_public_link_or_post_outbox"
+  },
+  "inbox_pending": 0,
+  "outbox_ready": 2,
+  "last_cmd": "paste",
+  "last_ok": true
+}

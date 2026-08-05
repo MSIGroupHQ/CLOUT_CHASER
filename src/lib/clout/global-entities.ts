@@ -3,10 +3,12 @@
  * Comprehensive taxonomy of US celebs and global international equivalents.
  */
 
+import type { CloutRegionId } from "./regions";
+
 export interface GlobalEntitySpec {
   id: string;
   name: string;
-  region: "US" | "UK_EU" | "LATAM" | "ASIA_KPOP" | "GULF_MENA" | "AFRICA" | "GLOBAL_SPORTS";
+  region: CloutRegionId;
   subculture: string;
   archetype: string;
   defaultHook: string;
@@ -253,7 +255,7 @@ export const GLOBAL_ENTITY_MATRIX: readonly GlobalEntitySpec[] = [
   {
     id: "SHAH_RUKH_KHAN",
     name: "Shah Rukh Khan",
-    region: "GULF_MENA",
+    region: "IN",
     subculture: "Bollywood & South Asian Cinema",
     archetype: "Global Cinema Icon",
     defaultHook: "Shah Rukh Khan’s box office comebacks generate global theatrical record numbers.",
@@ -262,11 +264,47 @@ export const GLOBAL_ENTITY_MATRIX: readonly GlobalEntitySpec[] = [
   {
     id: "AP_DHILLON",
     name: "AP Dhillon & Diljit Dosanjh",
-    region: "GULF_MENA",
+    region: "IN",
     subculture: "Punjabi Trap Crossover",
     archetype: "Punjabi Global Wave",
     defaultHook: "Diljit Dosanjh headlining Coachella brought Punjabi music to US stadium stages.",
     defaultCaption: "Punjabi trap and folk vocals are bridging North America, the UK, and South Asia."
+  },
+  {
+    id: "YOASOBI",
+    name: "YOASOBI",
+    region: "JP",
+    subculture: "J-Pop & Anime Soundtracks",
+    archetype: "Anime-Internet Chart Engine",
+    defaultHook: "YOASOBI turns anime openings into global TikTok audio beds overnight.",
+    defaultCaption: "Japanese chart culture is the quiet backbone of worldwide short-form audio.",
+  },
+  {
+    id: "HIKAKIN",
+    name: "Hikakin",
+    region: "JP",
+    subculture: "Japanese YouTube",
+    archetype: "JP Platform Institution",
+    defaultHook: "Japanese YouTube stars still run closed ecosystems Western brands cannot copy-paste.",
+    defaultCaption: "Local platform kings define virality rules before global apps catch up.",
+  },
+  {
+    id: "KSI_AU",
+    name: "KSI / Sidemen-adjacent AU export",
+    region: "OCEANIA",
+    subculture: "AU/UK Creator Crossover",
+    archetype: "Anglosphere Creator Export",
+    defaultHook: "Anglosphere creator networks move AU audiences through UK formats in hours.",
+    defaultCaption: "Oceania is not a lag market — it is an early format lab for English internet.",
+  },
+  {
+    id: "THE_KID_LAROI",
+    name: "The Kid LAROI",
+    region: "OCEANIA",
+    subculture: "Australian Pop/Rap Export",
+    archetype: "AU Global Breakout",
+    defaultHook: "Australian voices keep landing US #1s without abandoning local cadence.",
+    defaultCaption: "AU export pop is a permanent lane, not a one-hit anomaly.",
   },
 
   // --- GLOBAL SPORTS & ICONS ---

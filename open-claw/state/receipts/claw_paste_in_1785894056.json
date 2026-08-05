@@ -1,0 +1,20 @@
+{
+  "ts": "2026-08-05T01:40:56.718608+00:00",
+  "cmd": "paste",
+  "inbox": "paste_in.json",
+  "result": {
+    "ok": true,
+    "opp_hash": "CC-CLAW-D7AEFF6C16",
+    "region": "IN",
+    "pack": "C:\\Users\\DM\\MSIGroupHQ\\CLOUT_CHASER_CANON\\open-claw\\outbox\\PACK_CC-CLAW-D7AEFF6C16.json",
+    "post_draft": "C:\\Users\\DM\\MSIGroupHQ\\CLOUT_CHASER_CANON\\open-claw\\outbox\\POST_CC-CLAW-D7AEFF6C16.md",
+    "message": "Link ingested. Region tagged. Draft in outbox. Your ceiling: post the draft."
+  },
+  "authority": {
+    "clout_github": "https://github.com/MSIGroupHQ/CLOUT_CHASER",
+    "reach_github": "https://github.com/MSIGroupHQ/REACH_INTELLIGENCE",
+    "clout_live": "https://cloutchaser.prime88.studio",
+    "family": "open-claw",
+    "human_ceiling": "paste_public_link_or_post_outbox"
+  }
+}

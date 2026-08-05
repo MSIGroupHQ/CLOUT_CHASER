@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { CTASection } from "@/components/clout/CTASection";
 import { Hero } from "@/components/clout/Hero";
-import { OpportunityCard } from "@/components/clout/OpportunityCard";
+import { GlobalFeed } from "@/components/clout/GlobalFeed";
 import { SampleForm } from "@/components/clout/SampleForm";
 import { TechInfrastructureFlex } from "@/components/clout/TechInfrastructureFlex";
 import { PageEvent } from "@/components/page-event";
@@ -71,15 +71,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-shell seed-opportunities-section" id="opportunities">
-        <div className="section-heading-row">
-          <div><span className="eyebrow">Proof of output</span><h2>Four packages you can inspect now.</h2></div>
-          <p>Static V0 examples demonstrate the opportunity card, package output, safety check, and receipt-share loop — all built from real public signals.</p>
-        </div>
-        <div className="opportunity-card-grid">
-          {seedOpportunities.map((opportunity) => <OpportunityCard key={opportunity.oppHash} opportunity={opportunity} />)}
-        </div>
-      </section>
+      <GlobalFeed opportunities={seedOpportunities} />
 
       <section className="audience-section section-shell">
         <div className="section-heading-row">

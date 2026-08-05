@@ -1,8 +1,14 @@
+import type { CloutRegionId } from "./regions";
+
 export type SeedOpportunity = {
   oppHash: string;
   title: string;
   entity: string;
   lane: string;
+  /** Global region spine — required for worldwide feed */
+  region: CloutRegionId;
+  /** Optional market / country code e.g. JP, IN, BR, AU */
+  market?: string;
   score: number;
   recommendation: "PACKAGE";
   whyNow: string;
@@ -19,6 +25,7 @@ export const seedOpportunities = [
     title: "Drake isn’t dropping music. He’s dropping weather.",
     entity: "Drake",
     lane: "US Underground & Music",
+    region: "US",
     score: 86,
     recommendation: "PACKAGE",
     whyNow:
@@ -44,6 +51,7 @@ export const seedOpportunities = [
     title: "Drake and Central Cee are building the coldest bridge in rap.",
     entity: "Drake x Central Cee",
     lane: "UK & European Subcultures",
+    region: "UK_EU",
     score: 88,
     recommendation: "PACKAGE",
     whyNow:
@@ -59,6 +67,7 @@ export const seedOpportunities = [
     title: "Travis Scott’s Circus Maximus is an architectural spectacle.",
     entity: "Travis Scott",
     lane: "US Underground & Music",
+    region: "US",
     score: 85,
     recommendation: "PACKAGE",
     whyNow:
@@ -73,6 +82,7 @@ export const seedOpportunities = [
     title: "Playboi Carti’s Opium rollout is a masterclass in stealth marketing.",
     entity: "Playboi Carti",
     lane: "US Underground & Music",
+    region: "US",
     score: 92,
     recommendation: "PACKAGE",
     whyNow:
@@ -87,6 +97,7 @@ export const seedOpportunities = [
     title: "Kai Cenat’s subathons are live 24/7 reality television.",
     entity: "Kai Cenat",
     lane: "US Underground & Streaming",
+    region: "US",
     score: 94,
     recommendation: "PACKAGE",
     whyNow:
@@ -101,6 +112,7 @@ export const seedOpportunities = [
     title: "Kendrick Lamar’s West Coast anthem redefined beef as cultural geography.",
     entity: "Kendrick Lamar",
     lane: "US Underground & Culture",
+    region: "US",
     score: 96,
     recommendation: "PACKAGE",
     whyNow:
@@ -115,6 +127,7 @@ export const seedOpportunities = [
     title: "Peso Pluma and Corridos Tumbados are taking over global Spotify charts.",
     entity: "Peso Pluma",
     lane: "LatAm & Spanish Pop",
+    region: "LATAM",
     score: 89,
     recommendation: "PACKAGE",
     whyNow:
@@ -129,6 +142,7 @@ export const seedOpportunities = [
     title: "IShowSpeed’s IRL world tours are unscripted global diplomacy.",
     entity: "IShowSpeed",
     lane: "US Underground & Streaming",
+    region: "US",
     score: 91,
     recommendation: "PACKAGE",
     whyNow:
@@ -143,6 +157,7 @@ export const seedOpportunities = [
     title: "VTubers are generating multi-million dollar superchats and merch drops.",
     entity: "Ironmouse / Hololive",
     lane: "Asia-Pacific & Gaming",
+    region: "ASIA_KPOP",
     score: 87,
     recommendation: "PACKAGE",
     whyNow:
@@ -157,6 +172,7 @@ export const seedOpportunities = [
     title: "UK rap is entering its luxury-noir era.",
     entity: "Central Cee",
     lane: "UK & European Subcultures",
+    region: "UK_EU",
     score: 82,
     recommendation: "PACKAGE",
     whyNow:
@@ -171,6 +187,7 @@ export const seedOpportunities = [
     title: "High-fashion archive wear is becoming the default creator uniform.",
     entity: "Balenciaga / Rick Owens",
     lane: "High-Fashion & Streetwear",
+    region: "GLOBAL",
     score: 84,
     recommendation: "PACKAGE",
     whyNow:
@@ -185,6 +202,7 @@ export const seedOpportunities = [
     title: "Solana & Base memecoins are generating real-time internet lore.",
     entity: "Solana / Base",
     lane: "Crypto & FinTwit Lore",
+    region: "GLOBAL",
     score: 90,
     recommendation: "PACKAGE",
     whyNow:
@@ -199,6 +217,7 @@ export const seedOpportunities = [
     title: "MrBeast’s $5M video budget vs low-fi phone creators.",
     entity: "MrBeast",
     lane: "US Underground & Creator Economy",
+    region: "US",
     score: 89,
     recommendation: "PACKAGE",
     whyNow:
@@ -213,6 +232,7 @@ export const seedOpportunities = [
     title: "Saudi Arabia and UAE are buying the global gaming and eSports industry.",
     entity: "eSports World Cup / Dubai",
     lane: "Middle East & Gulf Trends",
+    region: "GULF_MENA",
     score: 86,
     recommendation: "PACKAGE",
     whyNow:
@@ -227,6 +247,7 @@ export const seedOpportunities = [
     title: "The internet loves lyrics that sound like a typo.",
     entity: "Ice Spice",
     lane: "US Underground & Memes",
+    region: "US",
     score: 79,
     recommendation: "PACKAGE",
     whyNow:
@@ -241,6 +262,7 @@ export const seedOpportunities = [
     title: "Brazilian Phonk and Speed-Up tracks dominate GymTok and CarTok.",
     entity: "Phonk / Underground",
     lane: "Underground Music & Micro-Niches",
+    region: "GLOBAL",
     score: 88,
     recommendation: "PACKAGE",
     whyNow:
@@ -255,6 +277,7 @@ export const seedOpportunities = [
     title: "Autonomous AI creator agents are running 24/7 faceless YouTube channels.",
     entity: "AI Agents",
     lane: "US Underground & Creator Economy",
+    region: "US",
     score: 93,
     recommendation: "PACKAGE",
     whyNow:
@@ -269,6 +292,7 @@ export const seedOpportunities = [
     title: "Corteiz guerrilla streetwear drops trigger city-wide scavenger hunts in Paris.",
     entity: "Corteiz",
     lane: "High-Fashion & Streetwear",
+    region: "GLOBAL",
     score: 91,
     recommendation: "PACKAGE",
     whyNow:
@@ -283,6 +307,7 @@ export const seedOpportunities = [
     title: "Solana meme token trading circles dominate micro-finance FinTwit.",
     entity: "Solana Trading",
     lane: "Crypto & Internet Money",
+    region: "GLOBAL",
     score: 87,
     recommendation: "PACKAGE",
     whyNow:
@@ -295,6 +320,18 @@ export const seedOpportunities = [
 ] as const satisfies readonly SeedOpportunity[];
 
 import { findGlobalEntity } from "./global-entities";
+
+function mapEntityRegion(region: string, subculture: string): CloutRegionId {
+  const s = (subculture + " " + region).toLowerCase();
+  if (/india|punjabi|bollywood|desi/.test(s)) return "IN";
+  if (/japan|vtuber|hololive|anime/.test(s) && !/k-pop|kpop/.test(s)) return "JP";
+  const allowed = new Set([
+    "US", "UK_EU", "LATAM", "ASIA_KPOP", "AFRICA", "GULF_MENA", "GLOBAL_SPORTS", "GLOBAL", "JP", "IN", "OCEANIA",
+  ]);
+  if (allowed.has(region)) return region as CloutRegionId;
+  return "GLOBAL";
+}
+
 
 export function getSeedOpportunity(oppHash: string): SeedOpportunity | undefined {
   const normalized = oppHash.trim().toUpperCase();
@@ -309,6 +346,7 @@ export function getSeedOpportunity(oppHash: string): SeedOpportunity | undefined
       title: `${entityMatch.name} — Global Pop Culture Signal Shift`,
       entity: entityMatch.name,
       lane: entityMatch.subculture,
+      region: mapEntityRegion(entityMatch.region, entityMatch.subculture),
       score: 88,
       recommendation: "PACKAGE",
       whyNow: `${entityMatch.name} (${entityMatch.archetype}) is driving high-velocity viral discourse across ${entityMatch.region} pop culture channels.`,

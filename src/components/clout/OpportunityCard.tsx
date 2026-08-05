@@ -7,6 +7,7 @@ export function OpportunityCard({ opportunity }: { opportunity: SeedOpportunity 
     <article className="opportunity-card">
       <div className="opportunity-card-topline">
         <span className="hash-badge">{opportunity.oppHash}</span>
+        {opportunity.region ? <span className="region-badge">{opportunity.region}</span> : null}
         <span className="lane-badge">{opportunity.lane}</span>
       </div>
       <h3>{opportunity.title}</h3>
